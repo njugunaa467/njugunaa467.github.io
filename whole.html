@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Njuguna | Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+    <div class="welcome-msg">
+        <span class="wave">Glad your Here!👋</span> 
+        <span class="msg-text">Let’s build something <strong>impactful</strong> together.</span>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙 Dark Mode</button>
+</nav>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Hi, I'm Alex Njuguna.</h1>
+            <p>
+                a <strong>Web Developer</strong> with a background in <strong>Laboratory Technology</strong>. 
+                I bridge the gap between rigorous analytical thinking and modern software development to build 
+                precise, scalable, and user-centric web applications.
+            </p>
+            <div class="btn-group">
+                <a href="#projects" class="primary-btn">View My Work</a>
+                <a href="CV-ALEX NJUGUNA.pdf" target="_blank" class="outline-btn">View CV</a>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/alex-njuguna-044370319/" target="_blank" class="social-icon li" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/njugunaa467" target="_blank" class="social-icon gh" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Image.jpeg" alt="Alex Njuguna" class="profile-photo">
+        </div>
+    </header>
+
+    <section id="skills" class="section-bg">
+        <h2 style="text-align: center;">Technical & Laboratory Expertise</h2>
+        <p style="text-align:center; color: var(--text-muted); margin-bottom: 20px;">Precision in the Lab. Accuracy in the Code.</p>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="filter-btn active" onclick="filterSkills(event, 'all')">All Expertise</button>
+            <button class="filter-btn" onclick="filterSkills(event, 'tech')">Software & Dev</button>
+            <button class="filter-btn" onclick="filterSkills(event, 'lab')">Lab & Analytical</button>
+            <button class="filter-btn" onclick="filterSkills(event, 'tools')">Digital Tools</button>
+        </div>
+
+        <div class="skill-list" id="skill-list">
+            <span class="skill-tag" data-type="tech">JavaScript</span>
+            <span class="skill-tag" data-type="tech">Python Programming</span>
+            <span class="skill-tag" data-type="tech">HTML5 / CSS3</span>
+            <span class="skill-tag" data-type="tech">Django Framework</span>
+            <span class="skill-tag" data-type="tech">SQL & Database Management</span>
+            <span class="skill-tag" data-type="tech">Git / GitHub</span>
+            <span class="skill-tag" data-type="tech">Debugging & Problem Solving</span>
+
+            <span class="skill-tag" data-type="lab">HPLC & UV-Spectrometry</span>
+            <span class="skill-tag" data-type="lab">FTIR-Machine Operation</span>
+            <span class="skill-tag" data-type="lab">Analytical Testing (Wet Chemistry)</span>
+            <span class="skill-tag" data-type="lab">GMP / GLP Documentation</span>
+            <span class="skill-tag" data-type="lab">Titrations & pH Metry</span>
+            <span class="skill-tag" data-type="lab">Quality Control (QC/QA)</span>
+            <span class="skill-tag" data-type="lab">Environmental & Water Analysis</span>
+            <span class="skill-tag" data-type="lab">LIMS Familiarity</span>
+
+            <span class="skill-tag" data-type="tools">Figma (UI/UX)</span>
+            <span class="skill-tag" data-type="tools">Photoshop / Canva</span>
+            <span class="skill-tag" data-type="tools">Google Workspace / MS Office</span>
+            <span class="skill-tag" data-type="tools">Slack / Asana / Trello</span>
+            <span class="skill-tag" data-type="tools">Graphic Design</span>
+            <span class="skill-tag" data-type="tools">Technical Reporting</span>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 style="text-align: center; margin-bottom: 10px;">Experience Log</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Professional Journey & Technical Impact</p>
+
+        <div class="live-exp-container">
+            <div class="exp-tabs">
+                <button class="tab-btn active" onclick="showExp(event, 'startups')">💻 Frontend Dev</button>
+                <button class="tab-btn" onclick="showExp(event, 'regal')">🧪 Lab Analyst</button>
+                <button class="tab-btn" onclick="showExp(event, 'upwork')">🎨 Creative Design</button>
+            </div>
+
+            <div class="exp-content-box">
+                <div id="startups" class="tab-content active">
+                    <div class="exp-header">
+                        <h3>Lead Frontend Developer & Digital Strategist <span class="loc">Nairobi Tech Ecosystem</span></h3>
+                        <span class="date">2024 — Present</span>
+                    </div>
+                    <p class="exp-desc">Empowering local enterprises by bridging the gap between traditional business and the digital economy.</p>
+                    <ul class="live-list">
+                        <li><strong>Digital Transformation:</strong> Architecting responsive, high-performance web platforms for startups, focused on turning digital presence into a measurable revenue stream.</li>
+                        <li><strong>Entrepreneurial Problem Solving:</strong> Consulting with business owners to translate their vision into user-centric interfaces, ensuring brand consistency across all digital touchpoints.</li>
+                        <li><strong>Technical Execution:</strong> Leveraging Vanilla JavaScript and modern CSS architectures to build lightweight, SEO-optimized sites that improve organic discovery by up to 40%.</li>
+                    </ul>
+                </div>
+
+                <div id="regal" class="tab-content">
+                    <div class="exp-header">
+                        <h3>Laboratory Quality Analyst <span class="loc">Regal Pharmaceuticals Ltd</span></h3>
+                        <span class="date">May 2025 — August 2025</span>
+                    </div>
+                    <p class="exp-desc">Ensuring consumer safety through rigorous analytical chemistry and data-driven quality control.</p>
+                    <ul class="live-list">
+                        <li><strong>Instrumental Analysis:</strong> Mastered high-precision operations of <strong>HPLC, UV-Spectrometry, and FTIR</strong> machines for assay of pharmaceutical products.</li>
+                        <li><strong>Regulatory Compliance:</strong> Upheld 100% compliance with <strong>GMP/GLP</strong> standards, maintaining meticulous documentation and audit trails.</li>
+                        <li><strong>Process Accuracy:</strong> Applied a "zero-error" mindset to environmental and water analysis, ensuring all samples met stringent safety standards.</li>
+                    </ul>
+                </div>
+
+                <div id="upwork" class="tab-content">
+                    <div class="exp-header">
+                        <h3>Visual Brand Identity Designer <span class="loc"> Upwork Global Freelance</span></h3>
+                        <span class="date">2024 — Present</span>
+                    </div>
+                    <p class="exp-desc">Crafting the visual language of modern brands through data-informed creative design.</p>
+                    <ul class="live-list">
+                        <li><strong>Global Collaboration:</strong> Directing the visual strategy for international clients, delivering high-fidelity assets that increased engagement by 35%.</li>
+                        <li><strong>UI/UX Prototyping:</strong> Utilizing <strong>Figma</strong> to design intuitive user journeys and wireframes that streamline transition from concept to code.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-bg">
+        <h2 style="text-align: center; margin-bottom: 40px;">Featured Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Weather App</h3>
+                <p>Dynamic UI rendering using OpenWeather API.</p>
+                <a href="https://weatherapp01r.netlify.app/" target="_blank" class="project-link">View Project →</a>
+            </div>
+            <div class="card">
+                <h3>Expense Tracker & To-Do App</h3>
+                <p>Vanilla JS application for financial data management and Time Management.</p>
+                <a href="https://adoapp.netlify.app/" target="_blank" class="project-link">View Project →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2 style="text-align: center; margin-bottom: 40px;">Certifications</h2>
+        <div class="grid">
+            <div class="cert-card">
+                <div class="cert-badge">🎧</div>
+                <h3>IT Customer Support</h3>
+                <p>Google/Coursera Certified</p>
+                <a href="ITCustomerSupportBasicsv120251004-32-1fh6m.pdf" target="_blank" class="view-cert-link">Verify →</a>
+            </div>
+            <div class="cert-card">
+                <div class="cert-badge">💻</div>
+                <h3>Software Dev</h3>
+                <p>PLP Academy Graduate</p>
+                <a href="PLP Academy2.pdf" target="_blank" class="view-cert-link">Verify →</a>
+            </div>
+            <div class="cert-card">
+                <div class="cert-badge">🤖</div>
+                <h3>Artificial Intelligence</h3>
+                <p>Modern AI Implementations</p>
+                <a href="alexnjuguna602gmail-com-5261-5363-20251015-402cd56cb4.pdf" target="_blank" class="view-cert-link">Verify →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-bg">
+        <h2 style="text-align: center; margin-bottom: 40px;">Get In Touch</h2>
+        <form name="contact" method="POST" data-netlify="true" style="max-width: 600px; margin: 0 auto;">
+            <input type="text" name="name" placeholder="Name" required style="width:100%; margin-bottom:15px; padding:12px; border-radius:6px; border:1px solid var(--border); background:var(--bg-body); color:var(--text-main);">
+            <input type="email" name="email" placeholder="Email" required style="width:100%; margin-bottom:15px; padding:12px; border-radius:6px; border:1px solid var(--border); background:var(--bg-body); color:var(--text-main);">
+            <textarea name="message" rows="5" placeholder="Message" required style="width:100%; margin-bottom:15px; padding:12px; border-radius:6px; border:1px solid var(--border); background:var(--bg-body); color:var(--text-main);"></textarea>
+            <button type="submit" class="primary-btn" style="width:100%; border:none; cursor:pointer;">Send Message</button>
+        </form>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: var(--text-muted); border-top: 1px solid var(--border);">
+        <p>&copy; 2026 Alex Njuguna | Lab Precision meets Code Logic.</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const btn = document.getElementById('themeBtn');
+            body.classList.toggle('dark-theme');
+            btn.innerHTML = body.classList.contains('dark-theme') ? "☀️ Light Mode" : "🌙 Dark Mode";
+        }
+
+        function filterSkills(event, category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const tags = document.querySelectorAll('.skill-tag');
+            tags.forEach(tag => {
+                const type = tag.getAttribute('data-type');
+                tag.style.display = (category === 'all' || type === category) ? "inline-block" : "none";
+            });
+        }
+
+        function showExp(event, roleId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            document.getElementById(roleId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
