@@ -174,14 +174,15 @@
     </section>
 
     <section id="contact" class="section-bg">
-        <h2 style="text-align: center; margin-bottom: 40px;">Get In Touch</h2>
-        <form name="contact" method="POST" data-netlify="true" style="max-width: 600px; margin: 0 auto;">
-            <input type="text" name="name" placeholder="Name" required style="width:100%; margin-bottom:15px; padding:12px; border-radius:6px; border:1px solid var(--border); background:var(--bg-body); color:var(--text-main);">
-            <input type="email" name="email" placeholder="Email" required style="width:100%; margin-bottom:15px; padding:12px; border-radius:6px; border:1px solid var(--border); background:var(--bg-body); color:var(--text-main);">
-            <textarea name="message" rows="5" placeholder="Message" required style="width:100%; margin-bottom:15px; padding:12px; border-radius:6px; border:1px solid var(--border); background:var(--bg-body); color:var(--text-main);"></textarea>
-            <button type="submit" class="primary-btn" style="width:100%; border:none; cursor:pointer;">Send Message</button>
-        </form>
-    </section>
+    <h2 style="text-align: center; margin-bottom: 40px;">Get In Touch</h2>
+    <form action="https://formspree.io/f/mnjvpzgr" method="POST" style="max-width: 600px; margin: 0 auto;">
+        <input type="text" name="name" placeholder="Name" required style="width:100%; margin-bottom:15px; padding:12px; border-radius:6px; border:1px solid var(--border); background:var(--bg-body); color:var(--text-main);">        
+        <input type="email" name="_replyto" placeholder="Email" required style="width:100%; margin-bottom:15px; padding:12px; border-radius:6px; border:1px solid var(--border); background:var(--bg-body); color:var(--text-main);">  
+        <textarea name="message" rows="5" placeholder="Message" required style="width:100%; margin-bottom:15px; padding:12px; border-radius:6px; border:1px solid var(--border); background:var(--bg-body); color:var(--text-main);"></textarea>
+        <input type="hidden" name="_subject" value="New Portfolio Inquiry!">
+        <button type="submit" class="primary-btn" style="width:100%; border:none; cursor:pointer;">Send Message</button>
+    </form>
+</section>
 
     <footer style="text-align: center; padding: 40px; color: var(--text-muted); border-top: 1px solid var(--border);">
         <p>&copy; 2026 Alex Njuguna | Lab Precision meets Code Logic.</p>
@@ -220,4 +221,5 @@
 </body>
 
 </html>
+
 
