@@ -101,14 +101,12 @@
     <section id="experience" class="section-bg">
         <h2 class="section-title">Experience Log</h2>
         <p class="section-subtitle">Professional Journey & Technical Impact</p>
-
         <div class="live-exp-container">
             <div class="exp-tabs">
                 <button class="tab-btn active" onclick="showExp(event, 'startups')">💻 Frontend Dev</button>
                 <button class="tab-btn" onclick="showExp(event, 'regal')">🧪 Lab Analyst</button>
                 <button class="tab-btn" onclick="showExp(event, 'upwork')">🎨 Creative Design</button>
             </div>
-
             <div class="exp-content-box">
                 <div id="startups" class="tab-content active">
                     <div class="exp-header">
@@ -117,12 +115,11 @@
                     </div>
                     <p class="exp-desc">Empowering local enterprises by bridging the gap between traditional business and the digital economy.</p>
                     <ul class="live-list">
-                        <li><strong>Digital Transformation:</strong> Architecting responsive, high-performance web platforms for startups, focused on turning digital presence into a measurable revenue stream.</li>
-                        <li><strong>Entrepreneurial Problem Solving:</strong> Consulting with business owners to translate their vision into user-centric interfaces.</li>
-                        <li><strong>Technical Execution:</strong> Leveraging Vanilla JavaScript and modern CSS architectures to build lightweight, SEO-optimized sites.</li>
+                        <li><strong>Digital Transformation:</strong> Architecting responsive web platforms focused on turning digital presence into revenue.</li>
+                        <li><strong>Entrepreneurial Problem Solving:</strong> Consulting with owners to translate vision into user-centric interfaces.</li>
+                        <li><strong>Technical Execution:</strong> Leveraging Vanilla JavaScript and modern CSS for lightweight, SEO-optimized sites.</li>
                     </ul>
                 </div>
-
                 <div id="regal" class="tab-content">
                     <div class="exp-header">
                         <h3>Laboratory Quality Analyst <span class="loc">Regal Pharmaceuticals Ltd</span></h3>
@@ -135,15 +132,14 @@
                         <li><strong>Process Accuracy:</strong> Applied a "zero-error" mindset to environmental and water analysis.</li>
                     </ul>
                 </div>
-
                 <div id="upwork" class="tab-content">
                     <div class="exp-header">
-                        <h3>Visual Brand Identity Designer <span class="loc"> Upwork Global Freelance</span></h3>
+                        <h3>Visual Brand Identity Designer <span class="loc">Upwork Global Freelance</span></h3>
                         <span class="date">2024 — Present</span>
                     </div>
                     <p class="exp-desc">Crafting the visual language of modern brands through data-informed creative design.</p>
                     <ul class="live-list">
-                        <li><strong>Global Collaboration:</strong> Directing the visual strategy for international clients, delivering high-fidelity assets.</li>
+                        <li><strong>Global Collaboration:</strong> Directing visual strategy for international clients, delivering high-fidelity assets.</li>
                         <li><strong>UI/UX Prototyping:</strong> Utilizing Figma to design intuitive user journeys and wireframes.</li>
                     </ul>
                 </div>
@@ -179,7 +175,7 @@
             <div class="cert-card">
                 <div class="cert-badge">💻</div>
                 <h3>Software Dev</h3>
-                <p>Power Learn Academy Africa </p>
+                <p>Power Learn Academy Africa</p>
                 <a href="PLP Academy2.pdf" target="_blank" class="view-cert-link">Verify →</a>
             </div>
             <div class="cert-card">
@@ -195,10 +191,9 @@
         <div class="contact-container">
             <h2 class="section-title">Discuss a Strategic Partnership</h2>
             <form action="https://formspree.io/f/mnjvpzgr" method="POST" class="styled-form">
-                <input type="text" name="name" placeholder="Your Name" required>        
-                <input type="email" name="_replyto" placeholder="Your Email" required>  
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <input type="hidden" name="_subject" value="New Portfolio Inquiry!">
+                <input type="text" name="name" placeholder="Name" required>        
+                <input type="email" name="_replyto" placeholder="Email" required>  
+                <textarea name="message" rows="5" placeholder="Message" required></textarea>
                 <button type="submit" class="primary-btn full-width">Send Message</button>
             </form>
         </div>
@@ -215,25 +210,21 @@
             body.classList.toggle('dark-theme');
             btn.innerHTML = body.classList.contains('dark-theme') ? "☀️ Light Mode" : "🌙 Dark Mode";
         }
-
         function filterSkills(event, category) {
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-
             const tags = document.querySelectorAll('.skill-tag');
             tags.forEach(tag => {
                 const type = tag.getAttribute('data-type');
                 tag.style.display = (category === 'all' || type === category) ? "inline-block" : "none";
             });
         }
-
         function showExp(event, roleId) {
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => content.classList.remove('active'));
             const tabs = document.querySelectorAll('.tab-btn');
             tabs.forEach(tab => tab.classList.remove('active'));
-            
             document.getElementById(roleId).classList.add('active');
             event.currentTarget.classList.add('active');
         }
