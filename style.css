@@ -245,3 +245,33 @@ footer { padding: 60px; text-align: center; border-top: 1px solid var(--border);
     .card-accent, .card-main-content { padding: 40px; }
     .social-links { justify-content: center; margin-top: 20px; }
 }
+/* Smooth Scroll for Navigation */
+html {
+    scroll-behavior: smooth;
+}
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.photo-container {
+    transition: transform 0.3s ease;
+}
+.photo-container:hover {
+    transform: scale(1.02);
+}
+body.dark-theme {
+    background-color: #0f172a; 
+    color: #f8fafc;
+}
+body.dark-theme .bg-white {
+    background-color: #1e293b; 
+    color: #f8fafc;
+}
+body.dark-theme .text-gray-900 {
+    color: #f8fafc;
+}
+body.dark-theme .text-gray-600 {
+    color: #cbd5e1;
+}
+body.dark-theme .border-gray-100 {
+    border-color: #334155;
+}
