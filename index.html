@@ -6,286 +6,92 @@
     <title>Alex Njuguna | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="font-sans text-gray-900">
 
-    <nav>
+    <nav class="flex justify-between items-center p-6 bg-white shadow-sm sticky top-0 z-50">
         <div class="welcome-msg">
             <span class="wave">Glad you're Here!👋</span> 
             <span class="msg-text">Let’s build something <strong>impactful</strong> together.</span>
         </div>
-        <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙 Dark Mode</button>
+        <button class="theme-toggle px-4 py-2 border rounded-lg hover:bg-gray-100 transition" onclick="toggleTheme()" id="themeBtn">🌙 Dark Mode</button>
     </nav>
 
-    <header class="hero">
-        <div class="hero-text">
-            <h1>Hi, I'm <span class="highlight">Alex Njuguna.</span></h1>
-            <p>
+    <header class="hero container mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
+        <div class="hero-text md:w-2/3">
+            <h1 class="text-5xl font-extrabold mb-4 text-gray-900 leading-tight">Hi, I'm <span class="text-blue-600">Alex Njuguna.</span></h1>
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
                 I am a <strong>Web Developer</strong> with a foundation in <strong>Laboratory Technology</strong>. 
                 I bridge the gap between rigorous analytical thinking and modern <strong>software development</strong> to build 
-                precise, scalable, and user-centric web applications. My work sits at the intersection of precision, performance, and modern web engineering.
+                precise, scalable, and user-centric web applications.
             </p>
 
-            <div class="btn-group">
-                <a href="#projects" class="primary-btn">View My Work</a>
-                <a href="CV-ALEX NJUGUNA.pdf" target="_blank" class="outline-btn">View CV</a>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/alex-njuguna-044370319/" target="_blank" class="social-icon li" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/njugunaa467" target="_blank" class="social-icon gh" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <div class="flex flex-wrap gap-4 items-center">
+                <a href="#projects" class="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition">View My Work</a>
+                <a href="CV-ALEX NJUGUNA.pdf" target="_blank" class="border border-gray-300 text-gray-700 px-8 py-3 rounded-xl font-bold hover:bg-gray-50 transition">View CV</a>
+                <div class="flex gap-4 ml-4">
+                    <a href="https://www.linkedin.com/in/alex-njuguna-044370319/" target="_blank" class="text-2xl text-blue-700 hover:scale-110 transition"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/njugunaa467" target="_blank" class="text-2xl text-gray-800 hover:scale-110 transition"><i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="photo-container">
-                <img src="Image.jpeg" alt="Alex Njuguna" class="profile-photo">
-                <div class="status-badge">Available for Projects</div>
+        <div class="hero-image md:w-1/3">
+            <div class="relative photo-container shadow-2xl rounded-2xl overflow-hidden border-4 border-white">
+                <img src="Image.jpeg" alt="Alex Njuguna" class="w-full h-auto">
+                <div class="absolute bottom-4 left-4 bg-green-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Available for Projects</div>
             </div>
         </div>
     </header>
 
-    <section id="insights" class="section-bg">
-        <div class="container-wide">
-            <h2 class="section-title">Featured Insight</h2>
-            <article class="featured-card">
-                <div class="card-accent">
-                    <h3>Why Work With Me?</h3>
-                    <div class="accent-line"></div>
-                    <p>The intersection of laboratory precision and entrepreneurial engineering.</p>
-                </div>
-                <div class="card-main-content">
-                    <p class="lead-text">"I don't just write code; I build <strong>digital assets designed for growth</strong>."</p>
-                    <p>My approach combines technical precision with an entrepreneurial mindset—meaning I focus on <strong>scalability, cost-efficiency, and user impact.</strong></p>
-                    <p>Whether I am optimizing hosting architecture to eliminate overhead or building financial tools that simplify complex data, my goal is always the same: to create robust, future-proof solutions that drive real-world value.</p>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2 class="section-title">Technical & Laboratory Expertise</h2>
-        <p class="section-subtitle">Precision in the Lab. Accuracy in the Code.</p>
-        
-        <div class="filter-container">
-            <button class="filter-btn active" onclick="filterSkills(event, 'all')">All Expertise</button>
-            <button class="filter-btn" onclick="filterSkills(event, 'tech')">Software & Dev</button>
-            <button class="filter-btn" onclick="filterSkills(event, 'lab')">Lab & Analytical</button>
-            <button class="filter-btn" onclick="filterSkills(event, 'tools')">Digital Tools</button>
-        </div>
-
-        <div class="skill-list" id="skill-list">
-            <span class="skill-tag" data-type="tech">JavaScript</span>
-            <span class="skill-tag" data-type="tech">Python Programming</span>
-            <span class="skill-tag" data-type="tech">HTML5 / CSS3</span>
-            <span class="skill-tag" data-type="tech">Django Framework</span>
-            <span class="skill-tag" data-type="tech">SQL & Database Management</span>
-            <span class="skill-tag" data-type="tech">Git / GitHub</span>
-            <span class="skill-tag" data-type="tech">Debugging & Problem Solving</span>
-            <span class="skill-tag" data-type="lab">HPLC & UV-Spectrometry</span>
-            <span class="skill-tag" data-type="lab">FTIR-Machine Operation</span>
-            <span class="skill-tag" data-type="lab">Analytical Testing (Wet Chemistry)</span>
-            <span class="skill-tag" data-type="lab">GMP / GLP Documentation</span>
-            <span class="skill-tag" data-type="lab">Titrations & pH Metry</span>
-            <span class="skill-tag" data-type="lab">Quality Control (QC/QA)</span>
-            <span class="skill-tag" data-type="lab">Environmental & Water Analysis</span>
-            <span class="skill-tag" data-type="lab">LIMS Familiarity</span>
-            <span class="skill-tag" data-type="tools">Figma (UI/UX)</span>
-            <span class="skill-tag" data-type="tools">Photoshop / Canva</span>
-            <span class="skill-tag" data-type="tools">Google Workspace / MS Office</span>
-            <span class="skill-tag" data-type="tools">Slack / Asana / Trello</span>
-            <span class="skill-tag" data-type="tools">Graphic Design</span>
-            <span class="skill-tag" data-type="tools">Technical Reporting</span>
-        </div>
-    </section>
-
-    <section id="experience" class="section-bg">
-        <h2 class="section-title">Experience Log</h2>
-        <p class="section-subtitle">Professional Journey & Technical Impact</p>
-        <div class="live-exp-container">
-            <div class="exp-tabs">
-                <button class="tab-btn active" onclick="showExp(event, 'startups')">💻 Frontend Dev</button>
-                <button class="tab-btn" onclick="showExp(event, 'regal')">🧪 Lab Analyst</button>
-                <button class="tab-btn" onclick="showExp(event, 'upwork')">🎨 Creative Design</button>
-            </div>
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4">Featured Projects</h2>
+            <p class="text-center text-gray-500 mb-12 italic">Precision-engineered cloud applications.</p>
             
-            <div class="exp-content-box">
-                <div id="startups" class="tab-content active">
-                    <div class="exp-header">
-                        <h3>Lead Frontend Developer & Digital Strategist <span class="loc">Nairobi Tech Ecosystem</span></h3>
-                        <span class="date">2024 — Present</span>
+            <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 mb-12 transform hover:-translate-y-2 transition-transform duration-300">
+                <div class="md:flex">
+                    <div class="md:shrink-0 bg-blue-600 flex items-center justify-center p-12 md:w-64">
+                        <div class="text-center">
+                            <span class="text-7xl block mb-4">🚌</span>
+                            <p class="text-white font-black text-lg tracking-widest uppercase">BusiBook</p>
+                        </div>
                     </div>
-                    <ul class="live-list">
-                        <li><strong>Digital Transformation:</strong> Architecting responsive web platforms focused on revenue.</li>
-                        <li><strong>Entrepreneurial Problem Solving:</strong> Consulting owners to translate vision into UX.</li>
-                        <li><strong>Technical Execution:</strong> Leveraging Vanilla JS for SEO-optimized sites.</li>
-                    </ul>
-                </div>
-
-                <div id="regal" class="tab-content">
-                    <div class="exp-header">
-                        <h3>Laboratory Quality Analyst <span class="loc">Regal Pharmaceuticals Ltd</span></h3>
-                        <span class="date">May 2025 — August 2025</span>
+                    <div class="p-10">
+                        <div class="uppercase tracking-widest text-sm text-blue-600 font-black mb-2">Production Full-Stack Application</div>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-4 tracking-tight">Nairobi Transit Booking Engine</h2>
+                        <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                            A smart-booking solution for Nairobi commuters. Handles dynamic fare calculation for <strong>Ordinary</strong> vs. <strong>Nganya</strong> categories with an automated <strong>PDF receipt engine</strong>. Optimized for real-time data persistence.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mb-10">
+                            <span class="bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold border border-blue-100">Python (Flask)</span>
+                            <span class="bg-green-50 text-green-700 px-4 py-1.5 rounded-full text-xs font-bold border border-green-100">Remote MySQL</span>
+                            <span class="bg-red-50 text-red-700 px-4 py-1.5 rounded-full text-xs font-bold border border-red-100">ReportLab PDF</span>
+                            <span class="bg-purple-50 text-purple-700 px-4 py-1.5 rounded-full text-xs font-bold border border-purple-100">Render CI/CD</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://busibook.onrender.com/" target="_blank" class="text-center bg-blue-600 text-white px-10 py-4 rounded-2xl font-black hover:bg-blue-700 transition shadow-lg hover:shadow-blue-200">Launch Live App</a>
+                            <a href="https://github.com/njugunaa467/BusiBook" target="_blank" class="text-center border-2 border-gray-200 text-gray-700 px-10 py-4 rounded-2xl font-bold hover:bg-gray-50 transition">Source Code</a>
+                        </div>
                     </div>
-                    <ul class="live-list">
-                        <li><strong>Instrumental Analysis:</strong> Mastered HPLC, UV-Spectrometry, and FTIR.</li>
-                        <li><strong>Regulatory Compliance:</strong> Upheld 100% GMP/GLP standards.</li>
-                        <li><strong>Process Accuracy:</strong> Applied "zero-error" mindset to analysis.</li>
-                    </ul>
-                </div>
-
-                <div id="upwork" class="tab-content">
-                    <div class="exp-header">
-                        <h3>Visual Brand Identity Designer <span class="loc">Upwork Global Freelance</span></h3>
-                        <span class="date">2024 — Present</span>
-                    </div>
-                    <ul class="live-list">
-                        <li><strong>Global Collaboration:</strong> Directing visual strategy for international clients.</li>
-                        <li><strong>UI/UX Prototyping:</strong> Utilizing Figma for intuitive user journeys.</li>
-                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Weather App</h3>
-                <p>Dynamic UI rendering using OpenWeather API.</p>
-                <a href="https://weather-app1r.netlify.app/" target="_blank" class="project-link">View Project →</a>
-            </div>
-            <div class="card">
-                <h3>Expense Tracker & To-Do App</h3>
-                <p>Vanilla JS application for financial data management.</p>
-                <a href="https://todo-expensetracker.netlify.app/" target="_blank" class="project-link">View Project →</a>
-            </div>
-        </div>
-        </div>
-            <section class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-xl rounded-2xl border border-gray-100 font-sans">
-    <div class="flex flex-col md:flex-row gap-8">
-        <div class="md:w-1/3 bg-blue-600 rounded-xl flex items-center justify-center p-4 text-white">
-            <div class="text-center">
-                <span class="text-5xl">🚌</span>
-                <h3 class="text-xl font-bold mt-2">BusiBook</h3>
-            </div>
-        </div>
-
-        <div class="md:w-2/3">
-            <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Nairobi Smart Transit System</h2>
-            <p class="text-gray-600 mb-4">
-                A full-stack booking engine for Nairobi commuters. Features dynamic fare calculation for 
-                <strong>Ordinary</strong> and <strong>Nganya</strong> categories with automated PDF receipt generation.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">Python (Flask)</span>
-                <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">MySQL</span>
-                <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">Render (CI/CD)</span>
-                <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold">ReportLab PDF</span>
-            </div>
-
-            <div class="flex gap-4">
-                <a href="https://busibook-nairobi.onrender.com" target="_blank" 
-                   class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-bold transition duration-300">
-                   View Live Demo
-                </a>
-                <a href="https://busibook.onrender.com/" target="_blank" 
-                   class="border border-gray-300 hover:bg-gray-50 text-gray-700 px-6 py-2 rounded-lg font-bold transition duration-300">
-                
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-    </section>
-
-    <section id="certifications" class="section-bg">
-        <h2 class="section-title">Certifications</h2>
-        <div class="grid">
-            <div class="cert-card">
-                <div class="cert-badge">🎧</div>
-                <h3>IT Customer Support</h3>
-                <p>Cisco Academy Certified</p>
-                <a href="ITCustomerSupportBasicsv120251004-32-1fh6m.pdf" target="_blank" class="view-cert-link">Verify →</a>
-            </div>
-            <div class="cert-card">
-                <div class="cert-badge">💻</div>
-                <h3>Software Dev</h3>
-                <p>Power Learn Academy Africa</p>
-                <a href="PLP Academy2.pdf" target="_blank" class="view-cert-link">Verify →</a>
-            </div>
-            <div class="cert-card">
-                <div class="cert-badge">🤖</div>
-                <h3>Artificial Intelligence</h3>
-                <p>Modern AI Implementations</p>
-                <a href="alexnjuguna602gmail-com-5261-5363-20251015-402cd56cb4.pdf" target="_blank" class="view-cert-link">Verify →</a>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="card p-8 bg-white rounded-2xl shadow hover:shadow-lg transition">
+                    <h3 class="text-xl font-bold mb-2">Weather App</h3>
+                    <p class="text-gray-600 mb-4">Dynamic UI rendering using OpenWeather API for real-time meteorology data.</p>
+                    <a href="https://weather-app1r.netlify.app/" target="_blank" class="text-blue-600 font-bold hover:underline">View Project →</a>
+                </div>
+                <div class="card p-8 bg-white rounded-2xl shadow hover:shadow-lg transition">
+                    <h3 class="text-xl font-bold mb-2">Expense & To-Do Tracker</h3>
+                    <p class="text-gray-600 mb-4">Vanilla JS application for structured financial data and task management.</p>
+                    <a href="https://todo-expensetracker.netlify.app/" target="_blank" class="text-blue-600 font-bold hover:underline">View Project →</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <div class="contact-container">
-            <h2 class="section-title">Discuss a Strategic Partnership</h2>
-            <form action="https://formspree.io/f/mnjvpzgr" method="POST" class="styled-form">
-                <input type="text" name="name" placeholder="Name" required>        
-                <input type="email" name="_replyto" placeholder="Email" required>  
-                <textarea name="message" rows="5" placeholder="Message" required></textarea>
-                <button type="submit" class="primary-btn full-width">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Alex Njuguna | Lab Precision meets Code Logic.</p>
-    </footer>
-
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            const btn = document.getElementById('themeBtn');
-            body.classList.toggle('dark-theme');
-            btn.innerHTML = body.classList.contains('dark-theme') ? "☀️ Light Mode" : "🌙 Dark Mode";
-        }
-
-        function filterSkills(event, category) {
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            const tags = document.querySelectorAll('.skill-tag');
-            tags.forEach(tag => {
-                const type = tag.getAttribute('data-type');
-                if (category === 'all' || type === category) {
-                    tag.style.display = "inline-block";
-                    setTimeout(() => { tag.style.opacity = "1"; }, 10);
-                } else {
-                    tag.style.display = "none";
-                    tag.style.opacity = "0";
-                }
-            });
-        }
-
-        function showExp(event, roleId) {
-            const contents = document.querySelectorAll('.tab-content');
-            const tabs = document.querySelectorAll('.tab-btn');
-
-            tabs.forEach(tab => tab.classList.remove('active'));
-            contents.forEach(content => {
-                content.classList.remove('active');
-                content.style.display = 'none';
-            });
-
-            event.currentTarget.classList.add('active');
-            const target = document.getElementById(roleId);
-            target.style.display = 'block';
-            
-            setTimeout(() => {
-                target.classList.add('active');
-            }, 20);
-        }
-    </script>
-</body>
+    </body>
 </html>
-
-
