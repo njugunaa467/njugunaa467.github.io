@@ -3,32 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Njuguna | Portfolio</title>
+    <title>NjugunaTech | Alex Njuguna</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <div class="welcome-msg">
-            <span class="wave">Glad you're Here!👋</span> 
-            <span class="msg-text">Let’s build something <strong>impactful</strong> together.</span>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="brand-identity">
+                <img src="nt-logo.png" alt="njugunaTech Logo" class="brand-logo">
+                <span class="brand-name">NjugunaTech</span>
+            </div>
+            
+            <div class="button-nav-group">
+                <a href="#home" class="nav-btn active">HOME</a>
+                <a href="#about" class="nav-btn">ABOUT</a>
+                <a href="#services" class="nav-btn">SERVICES</a>
+                <a href="#process" class="nav-btn">PROCESS</a>
+                <a href="#projects" class="nav-btn">PROJECTS</a>
+                <a href="#contact" class="nav-btn contact-pill">CONTACT</a>
+            </div>
+
+            <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
         </div>
-        <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙 Dark Mode</button>
     </nav>
 
-    <header class="hero">
+    <header id="home" class="hero">
         <div class="hero-text">
+            <div class="welcome-msg">
+                <span class="wave">Glad you're Here!👋</span> 
+                <span class="msg-text">Founder of <strong>njugunaTech</strong></span>
+            </div>
             <h1>Hi, I'm <span class="highlight">Alex Njuguna.</span></h1>
             <p>
-                I am a <strong>Web Developer</strong> with a foundation in <strong>Laboratory Technology</strong>. 
-                I bridge the gap between rigorous analytical thinking and modern <strong>software development</strong> to build 
-                precise, scalable, and user-centric web applications. My work sits at the intersection of precision, performance and modern web engineering.
+                I bridge the gap between <strong>Laboratory Precision</strong> and modern <strong>Web Engineering</strong>. 
+                Applying a zero-error threshold to build scalable digital assets for businesses and high-growth startups.
             </p>
-<script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="FP1K2TK2YL9wUkRvjbPsw";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
+
             <div class="btn-group">
                 <a href="#projects" class="primary-btn">View My Work</a>
                 <a href="CV-ALEX NJUGUNA.pdf" target="_blank" class="outline-btn">View CV</a>
@@ -38,169 +51,123 @@
                 </div>
             </div>
         </div>
+
         <div class="hero-image">
-            <div class="photo-container">
+            <div class="photo-container circular-frame">
                 <img src="Image.jpeg" alt="Alex Njuguna" class="profile-photo">
                 <div class="status-badge">Available for Projects</div>
             </div>
         </div>
     </header>
 
-    <section id="insights" class="section-bg">
+    <section id="about" class="section-bg">
         <div class="container-wide">
-            <h2 class="section-title">Featured Insight</h2>
+            <h2 class="section-title">The Foundation</h2>
             <article class="featured-card">
                 <div class="card-accent">
-                    <h3>Why Work With Me?</h3>
+                    <h3>Beyond Passion: Precision.</h3>
                     <div class="accent-line"></div>
-                    <p>The intersection of laboratory precision and entrepreneurial engineering.</p>
+                    <p>Coming from a background in Laboratory Technology, I view code as a scientific process.</p>
                 </div>
                 <div class="card-main-content">
-                    <p class="lead-text">"I don't just write code; I build <strong>digital assets designed for growth</strong>."</p>
-                    <p>My approach combines technical precision with an entrepreneurial mindset—meaning I focus on <strong>scalability, cost-efficiency, and user impact.</strong></p>
-                    <p>Whether I am optimizing hosting architecture to eliminate overhead or building financial tools that simplify complex data, my goal is always the same: to create robust, future-proof solutions that drive real-world value.</p>
+                    <p class="lead-text">"I don't just write code; I build <strong>digital assets designed for efficiency</strong>."</p>
+                    <p>In the lab, analytical precision is non-negotiable. I apply this same <strong>rigorous logic</strong> to web architecture. Whether it is managing complex data for a logistics engine or optimizing a financial dashboard, I focus on scalability, security, and measurable impact.</p>
                 </div>
             </article>
         </div>
     </section>
 
-    <section id="skills">
-        <h2 class="section-title">Technical & Laboratory Expertise</h2>
-        <p class="section-subtitle">Precision in the Lab. Accuracy in the Code.</p>
-        
-        <div class="filter-container">
-            <button class="filter-btn active" onclick="filterSkills(event, 'all')">All Expertise</button>
-            <button class="filter-btn" onclick="filterSkills(event, 'tech')">Software & Dev</button>
-            <button class="filter-btn" onclick="filterSkills(event, 'lab')">Lab & Analytical</button>
-            <button class="filter-btn" onclick="filterSkills(event, 'tools')">Digital Tools</button>
-        </div>
-
-        <div class="skill-list" id="skill-list">
-            <span class="skill-tag" data-type="tech">JavaScript</span>
-            <span class="skill-tag" data-type="tech">Python Programming</span>
-            <span class="skill-tag" data-type="tech">HTML5 / CSS3</span>
-            <span class="skill-tag" data-type="tech">Django Framework</span>
-            <span class="skill-tag" data-type="tech">SQL & Database Management</span>
-            <span class="skill-tag" data-type="tech">Git / GitHub</span>
-            <span class="skill-tag" data-type="tech">Debugging & Problem Solving</span>
-            <span class="skill-tag" data-type="lab">HPLC & UV-Spectrometry</span>
-            <span class="skill-tag" data-type="lab">FTIR-Machine Operation</span>
-            <span class="skill-tag" data-type="lab">Analytical Testing (Wet Chemistry)</span>
-            <span class="skill-tag" data-type="lab">GMP / GLP Documentation</span>
-            <span class="skill-tag" data-type="lab">Titrations & pH Metry</span>
-            <span class="skill-tag" data-type="lab">Quality Control (QC/QA)</span>
-            <span class="skill-tag" data-type="lab">Environmental & Water Analysis</span>
-            <span class="skill-tag" data-type="lab">LIMS Familiarity</span>
-            <span class="skill-tag" data-type="tools">Figma (UI/UX)</span>
-            <span class="skill-tag" data-type="tools">Photoshop / Canva</span>
-            <span class="skill-tag" data-type="tools">Google Workspace / MS Office</span>
-            <span class="skill-tag" data-type="tools">Slack / Asana / Trello</span>
-            <span class="skill-tag" data-type="tools">Graphic Design</span>
-            <span class="skill-tag" data-type="tools">Technical Reporting</span>
+    <section id="services">
+        <h2 class="section-title">njugunaTech Solutions</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-layer-group"></i></div>
+                <h3>Custom System Architecture</h3>
+                <p>Building internal tools and dashboards that eliminate business friction and automate manual workflows.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-code-branch"></i></div>
+                <h3>Full-Stack Deployment</h3>
+                <p>End-to-end web applications with robust Python/Django backends and high-performance JavaScript frontends.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-microchip"></i></div>
+                <h3>Technical Consultation</h3>
+                <p>Strategic advice on database integrity, hosting cost-efficiency, and local API integrations for the Kenyan market.</p>
+            </div>
         </div>
     </section>
 
-    <section id="experience" class="section-bg">
-    <h2 class="section-title">Experience Log</h2>
-    <p class="section-subtitle">Professional Journey & Technical Impact</p>
-    <div class="live-exp-container">
-        <div class="exp-tabs">
-            <button class="tab-btn active" onclick="showExp(event, 'startups')">💻 Frontend Dev</button>
-            <button class="tab-btn" onclick="showExp(event, 'regal')">🧪 Lab Analyst</button>
-            <button class="tab-btn" onclick="showExp(event, 'upwork')">🎨 Creative Design</button>
-        </div>
-        
-        <div class="exp-content-box">
-            <div id="startups" class="tab-content active">
-                <div class="exp-header">
-                    <h3>Lead Frontend Developer & Digital Strategist <span class="loc">Nairobi Tech Ecosystem</span></h3>
-                    <span class="date">2024 — Present</span>
-                </div>
-                <ul class="live-list">
-                    <li><strong>Full-Stack Integration:</strong> Developed and deployed end-to-end applications using Flask and MySQL, focusing on secure data handling and persistent storage.</li>
-                    <li><strong>Performance Optimization:</strong> Engineered SEO-friendly, responsive frontends using Vanilla JavaScript, reducing page load times and improving mobile accessibility.</li>
-                    <li><strong>Security & DevOps:</strong> Implemented CI/CD pipelines via Render and secured production environments using environment variables and credential rotation.</li>
-                </ul>
+    <section id="process" class="section-bg">
+        <h2 class="section-title">Our Working Process</h2>
+        <div class="process-flow">
+            <div class="step">
+                <div class="step-circle">01</div>
+                <h4>Discovery</h4>
+                <p>Consulting on business goals and technical roadmaps.</p>
             </div>
-
-            <div id="regal" class="tab-content">
-                <div class="exp-header">
-                    <h3>Laboratory Quality Analyst <span class="loc">Regal Pharmaceuticals Ltd</span></h3>
-                    <span class="date">May 2025 — August 2025</span>
-                </div>
-                <ul class="live-list">
-                    <li><strong>Analytical Precision:</strong> Executed complex chemical analyses using HPLC and UV-Spectrometry, maintaining a "zero-error" threshold in high-stakes pharmaceutical testing.</li>
-                    <li><strong>Standard Operating Procedures (SOPs):</strong> Authored and maintained GMP/GLP documentation, ensuring 100% regulatory compliance during internal and external audits.</li>
-                    <li><strong>Critical Problem Solving:</strong> Investigated out-of-specification (OOS) results, applying root-cause analysis—a mindset I now apply to debugging complex software logic.</li>
-                </ul>
+            <div class="step">
+                <div class="step-circle">02</div>
+                <h4>Logic</h4>
+                <p>Architecting secure data flow and UI wireframes.</p>
             </div>
-
-            <div id="upwork" class="tab-content">
-                <div class="exp-header">
-                    <h3>Visual Brand Identity Designer <span class="loc">Upwork Global Freelance</span></h3>
-                    <span class="date">2024 — Present</span>
-                </div>
-                <ul class="live-list">
-                    <li><strong>Client Strategy:</strong> Managed the end-to-end design lifecycle for international clients, translating abstract business goals into high-converting UI/UX wireframes in Figma.</li>
-                    <li><strong>Technical Visuals:</strong> Created comprehensive brand identity kits and digital assets, ensuring cross-platform consistency for growing startups.</li>
-                    <li><strong>Project Management:</strong> Consistently met tight deadlines across multiple time zones while maintaining a 5-star client satisfaction rating.</li>
-                </ul>
+            <div class="step">
+                <div class="step-circle">03</div>
+                <h4>Build</h4>
+                <p>Coding with analytical precision and iterative testing.</p>
+            </div>
+            <div class="step">
+                <div class="step-circle">04</div>
+                <h4>Deploy</h4>
+                <p>Launching scalable assets with ongoing technical support.</p>
             </div>
         </div>
-    </div>
-</section>
     </section>
 
     <section id="projects">
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title">Featured Assets</h2>
         <div class="grid">
             <div class="card busibook-highlight">
                 <div class="busibook-header">
                     <span class="icon">🚌</span>
                     <h3>BusiBook: Transit Engine</h3>
                 </div>
-                <p>Full-stack Nairobi booking system. Features dynamic fare scaling for <strong>Ordinary/Nganya</strong> buses and secure PDF receipt generation. Built with <strong>Remote MySQL</strong> and <strong>Flask</strong>.</p>
-                <div class="project-tags">
-                    <span>Python</span> <span>MySQL</span> <span>Render</span>
-                </div>
-                <a href="https://busibook.onrender.com/" target="_blank" class="project-link">Launch Live App →</a>
+                <p>A logistics booking system for the Nairobi transport sector. Features dynamic fare scaling and secure financial data handling.</p>
+                <div class="project-tags"><span>Python</span> <span>MySQL</span> <span>Flask</span></div>
+                <a href="https://busibook.onrender.com/" target="_blank" class="project-link">View Solution →</a>
             </div>
 
             <div class="card">
-                <h3>Weather App</h3>
-                <p>Dynamic UI rendering using OpenWeather API for real-time meteorology data.</p>
+                <h3>Meteorological Dashboard</h3>
+                <p>Dynamic UI rendering real-time weather data via API to assist in quick decision-making for climate-sensitive tasks.</p>
+                <div class="project-tags"><span>JavaScript</span> <span>API Integration</span></div>
                 <a href="https://weather-app1r.netlify.app/" target="_blank" class="project-link">View Project →</a>
             </div>
 
             <div class="card">
-                <h3>Expense Tracker & To-Do App</h3>
-                <p>Vanilla JS application for financial data management and local persistence.</p>
+                <h3>Financial Data Tracker</h3>
+                <p>A tool designed for local persistence and management of business expenses and task priority.</p>
+                <div class="project-tags"><span>Vanilla JS</span> <span>Data Management</span></div>
                 <a href="https://todo-expensetracker.netlify.app/" target="_blank" class="project-link">View Project →</a>
             </div>
         </div>
     </section>
 
-    <section id="certifications" class="section-bg">
-        <h2 class="section-title">Certifications</h2>
-        <div class="grid">
-            <div class="cert-card">
-                <div class="cert-badge">🎧</div>
-                <h3>IT Customer Support</h3>
-                <p>Cisco Academy Certified</p>
-                <a href="ITCustomerSupportBasicsv120251004-32-1fh6m.pdf" target="_blank" class="view-cert-link">Verify →</a>
-            </div>
-            <div class="cert-card">
-                <div class="cert-badge">💻</div>
-                <h3>Software Dev</h3>
-                <p>Power Learn Academy Africa</p>
-                <a href="PLP Academy2.pdf" target="_blank" class="view-cert-link">Verify →</a>
-            </div>
-            <div class="cert-card">
-                <div class="cert-badge">🤖</div>
-                <h3>Artificial Intelligence</h3>
-                <p>Modern AI Implementations</p>
-                <a href="alexnjuguna602gmail-com-5261-5363-20251015-402cd56cb4.pdf" target="_blank" class="view-cert-link">Verify →</a>
-            </div>
+    <section id="skills" class="section-bg">
+        <h2 class="section-title">Technical & Laboratory Expertise</h2>
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterSkills(event, 'all')">All Expertise</button>
+            <button class="filter-btn" onclick="filterSkills(event, 'tech')">Software & Dev</button>
+            <button class="filter-btn" onclick="filterSkills(event, 'lab')">Lab & Analytical</button>
+        </div>
+        <div class="skill-list" id="skill-list">
+            <span class="skill-tag" data-type="tech">JavaScript</span>
+            <span class="skill-tag" data-type="tech">Python/Django</span>
+            <span class="skill-tag" data-type="tech">SQL & Databases</span>
+            <span class="skill-tag" data-type="tech">Debugging Logic</span>
+            <span class="skill-tag" data-type="lab">HPLC & UV-Spec</span>
+            <span class="skill-tag" data-type="lab">QC/QA SOPs</span>
+            <span class="skill-tag" data-type="lab">GMP Compliance</span>
         </div>
     </section>
 
@@ -209,16 +176,23 @@
             <h2 class="section-title">Discuss a Strategic Partnership</h2>
             <form action="https://formspree.io/f/mnjvpzgr" method="POST" class="styled-form">
                 <input type="text" name="name" placeholder="Name" required>        
-                <input type="email" name="_replyto" placeholder="Email" required>  
-                <textarea name="message" rows="5" placeholder="Message" required></textarea>
-                <button type="submit" class="primary-btn full-width">Send Message</button>
+                <input type="email" name="_replyto" placeholder="Business Email" required>  
+                <textarea name="message" rows="5" placeholder="Tell me about your project goals..." required></textarea>
+                <button type="submit" class="primary-btn full-width">Start Project</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Alex Njuguna | Lab Precision meets Code Logic.</p>
+        <div class="footer-wrap">
+            <img src="Image.jpeg" alt="Alex Njuguna" class="footer-avatar">
+            <p>&copy; 2026 NjugunaTech | Global Tech Results.</p>
+        </div>
     </footer>
+
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="FP1K2TK2YL9wUkRvjbPsw";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
 
     <script>
         function toggleTheme() {
@@ -232,40 +206,12 @@
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-
             const tags = document.querySelectorAll('.skill-tag');
             tags.forEach(tag => {
                 const type = tag.getAttribute('data-type');
-                if (category === 'all' || type === category) {
-                    tag.style.display = "inline-block";
-                    setTimeout(() => { tag.style.opacity = "1"; }, 10);
-                } else {
-                    tag.style.display = "none";
-                    tag.style.opacity = "0";
-                }
+                tag.style.display = (category === 'all' || type === category) ? "inline-block" : "none";
             });
-        }
-
-        function showExp(event, roleId) {
-            const contents = document.querySelectorAll('.tab-content');
-            const tabs = document.querySelectorAll('.tab-btn');
-
-            tabs.forEach(tab => tab.classList.remove('active'));
-            contents.forEach(content => {
-                content.classList.remove('active');
-                content.style.display = 'none';
-            });
-
-            event.currentTarget.classList.add('active');
-            const target = document.getElementById(roleId);
-            target.style.display = 'block';
-            
-            setTimeout(() => {
-                target.classList.add('active');
-            }, 20);
         }
     </script>
 </body>
 </html>
-
-
