@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>njugunaTech | Business Web Systems & Engineering</title>
+    <meta name="description" content="Alex Njuguna | Founder of njugunaTech - Engineering scalable digital assets and high-precision business systems.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="brand-identity">
+                <img src="njugunaTech LOGO.jpeg" alt="njugunaTech Logo" class="brand-logo" loading="lazy">
+                <span class="brand-name">njugunaTech</span>
+            </div>
+            <div class="button-nav-group">
+                <a href="#home" class="nav-btn active">HOME</a>
+                <a href="#vision" class="nav-btn">VISION</a>
+                <a href="#services" class="nav-btn">SERVICES</a>
+                <a href="#workflow" class="nav-btn">WORKFLOW</a>
+                <a href="#experience" class="nav-btn">JOURNEY</a>
+                <a href="#projects" class="nav-btn">PROJECTS</a>
+                <a href="#contact" class="nav-btn contact-pill">CONTACT</a>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">☀️ Light</button>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-text">
+            <div class="welcome-msg">
+                <span class="wave">Glad you're here 👋Let's Build Something Amazing Together! </span> 
+                <span class="msg-text">Founder of <strong>njugunaTech</strong></span>
+            </div>
+            <h1>Engineering <span class="highlight">Business Growth</span> through Code</h1>
+            <p>I build <strong>high-precision web applications</strong> designed to eliminate business friction. 
+                By combining systemic logic with modern Front-End engineering, I turn complex problems into scalable digital assets.</p>
+            
+            <div class="btn-group">
+                <div class="main-actions">
+                    <a href="#projects" class="primary-btn">Analyze My Work</a>
+                    <a href="CV-ALEX NJUGUNA.pdf" target="_blank" class="outline-btn">View My CV</a>
+                </div>
+                <div class="social-links-inline">
+                    <a href="https://www.linkedin.com/in/alex-njuguna-044370319/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/njugunaa467" target="_blank" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="photo-container circular-frame">
+                <img src="Image.jpeg" alt="Alex Njuguna" class="profile-photo" loading="lazy">
+                <div class="status-badge">Available for Consultation</div>
+            </div>
+        </div>
+    </header>
+
+    <section id="vision">
+        <div class="container-wide">
+            <h2 class="section-title"> njugunaTech Vision</h2>
+            <div class="vision-box">
+                <div class="vision-content">
+                    <i class="fas fa-microchip vision-icon"></i>
+                    <h3>Solving Problems, Not Just Writing Code</h3>
+                    <p>Technology is a lever for efficiency. At njugunaTech, we build <strong>business instruments</strong>. We focus on identifying operational friction and engineering digital solutions that turn manual effort into automated profit. Precision isn't a goal; it's our baseline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-bg">
+        <div class="container-wide">
+            <h2 class="section-title">Core Services</h2>
+            <div class="grid">
+                <div class="card service-card">
+                    <i class="fas fa-terminal service-icon"></i>
+                    <h3>Custom Web Engineering</h3>
+                    <p>Development of high-performance front-end architectures that prioritize speed, accessibility, and user conversion logic.</p>
+                </div>
+                <div class="card service-card">
+                    <i class="fas fa-database service-icon"></i>
+                    <h3>Business Systems Logic</h3>
+                    <p>Architecting backend systems and database structures that manage complex data flows and automate manual workflows.</p>
+                </div>
+                <div class="card service-card">
+                    <i class="fas fa-search-nodes service-icon"></i>
+                    <h3>Technical Auditing</h3>
+                    <p>Rigorous analysis of existing systems to identify performance bottlenecks and ensure long-term scalability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workflow">
+        <div class="container-wide">
+            <h2 class="section-title">Operational Strategy</h2>
+            <div class="grid">
+                <div class="card blog-card">
+                    <div class="step-num">01</div>
+                    <h3>Strategic Discovery</h3>
+                    <p>We map the business logic and identify bottlenecks before writing code. We aim for systemic efficiency from day one.</p>
+                </div>
+                <div class="card blog-card">
+                    <div class="step-num">02</div>
+                    <h3>Agile Architecture</h3>
+                    <p>Using a "Lab Mindset"—precision testing at every stage. We deploy MVPs to gather data and refine system ROI quickly.</p>
+                </div>
+                <div class="card blog-card">
+                    <div class="step-num">03</div>
+                    <h3>Automated Scaling</h3>
+                    <p>We automate deployment and maintenance via CI/CD, ensuring your digital assets grow alongside your revenue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section-bg">
+        <h2 class="section-title">Professional Journey</h2>
+        <div class="live-exp-container">
+            <div class="exp-tabs">
+                <button class="tab-btn active" onclick="showExp(event, 'tech-lead')">💻 njugunaTech</button>
+                <button class="tab-btn" onclick="showExp(event, 'design')">🎨 Branding</button>
+                <button class="tab-btn" onclick="showExp(event, 'regal')">🧪 Laboratory</button>
+            </div>
+            <div class="exp-content-box">
+                <div id="tech-lead" class="tab-content active">
+                    <h3>Founder & Systems Engineer <span class="highlight">@njugunaTech</span></h3>
+                    <p class="date">2025 — Present</p>
+                    <ul class="live-list">
+                        <li><strong>Systemic Architecture:</strong> Architecting full-stack solutions using Python and JavaScript with a focus on data integrity and high-concurrency performance.</li>
+                        <li><strong>Friction Elimination:</strong> Specialized in developing internal dashboards that reduced client manual processing time by an average of 40%.</li>
+                        <li><strong>Cloud Deployment:</strong> Managing high-uptime environments (99.9%) on Render and Netlify via automated CI/CD workflows.</li>
+                    </ul>
+                </div>
+                <div id="design" class="tab-content" style="display: none;">
+                    <h3>Identity & UI Specialist <span class="highlight">@Global Freelance</span></h3>
+                    <p class="date">2024 — Present</p>
+                    <ul class="live-list">
+                        <li><strong>Interface Engineering:</strong> Transforming user requirements into intuitive, high-fidelity Figma prototypes designed for maximum conversion.</li>
+                        <li><strong>Brand Systems:</strong> Developed comprehensive visual identities for tech startups, ensuring cross-platform scalability.</li>
+                    </ul>
+                </div>
+                <div id="regal" class="tab-content" style="display: none;">
+                    <h3>Quality Analyst <span class="highlight">@Regal Pharma</span></h3>
+                    <p class="date">May 2025 — Aug 2025</p>
+                    <ul class="live-list">
+                        <li><strong>Analytical Rigor:</strong> Conducted high-stakes scientific validation on pharmaceutical data where a 0.1% margin of error was critical.</li>
+                        <li><strong>Logic-Driven Auditing:</strong> Applied rigorous validation methods to software debugging, ensuring high logic coverage in complex codebases.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterSkills(event, 'all')">Everything</button>
+            <button class="filter-btn" onclick="filterSkills(event, 'tech')">Software</button>
+            <button class="filter-btn" onclick="filterSkills(event, 'tools')">Design</button>
+        </div>
+        <div class="skill-list">
+            <span class="skill-tag" data-type="tech"><i class="fa-brands fa-python"></i> Python / Django</span>
+            <span class="skill-tag" data-type="tech"><i class="fa-brands fa-js"></i> JavaScript </span>
+            <span class="skill-tag" data-type="tech"><i class="fa-solid fa-database"></i> MySQL Databases</span>
+            <span class="skill-tag" data-type="tools"><i class="fa-brands fa-figma"></i> Figma UI/UX</span>
+            <span class="skill-tag" data-type="tools"><i class="fa-solid fa-chart-pie"></i> Html,CSS</span>
+            <span class="skill-tag" data-type="tools"><i class="fa-solid fa-chart-pie"></i> Data Analytics</span>
+            <span class="skill-tag" data-type="tools"><i class="fa-solid fa-chart-pie"></i> Photoshop/Canva</span>
+
+
+        </div>
+    </section>
+
+    <section id="projects" class="section-bg">
+        <h2 class="section-title">Featured Assets</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🚌 Transit Engine: Nairobi</h3>
+                <p>Logistics booking system with dynamic fare scaling and payment handling.</p>
+                <a href="https://busibook.onrender.com/" target="_blank" class="project-link">Launch Solution →</a>
+            </div>
+            <div class="card">
+                <h3>☁️ Weather Dashboard</h3>
+                <p>Real-time meteorological data via API for quick decision-making.</p>
+                <a href="https://weather-app1r.netlify.app/" target="_blank" class="project-link">Launch App →</a>
+            </div>
+            <div class="card">
+                <h3>💰 Financial Intelligence</h3>
+                <p>Precision-based expense tracking with automated reporting.</p>
+                <a href="https://adoapp.netlify.app/" target="_blank" class="project-link">Explore App →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+    <div class="contact-container">
+        <form action="https://formspree.io/f/mnjvpzgr" method="POST" class="styled-form">
+            <h2 class="section-title" style="grid-column: span 2; margin-bottom: 10px;">Scale Your Project</h2>
+            <p style="grid-column: span 2; text-align: center; margin-bottom: 30px; color: var(--text-dim);">
+                Ready to automate your workflow? Let's discuss your system requirements.
+            </p>
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="Alex Njuguna" required>
+            </div>
+            <div class="form-group">
+                <label>Business Email</label>
+                <input type="email" name="email" placeholder="alex@njuguna.tech" required>
+            </div>
+            <div class="form-group full-width">
+                <label>Project Details</label>
+                <textarea name="message" rows="5" placeholder="Tell me about the bottleneck you want to solve..." required></textarea>
+            </div>
+            
+            <input type="hidden" name="_gotcha" style="display:none !important">
+
+            <div class="full-width">
+                <button type="submit" class="primary-btn submit-btn">Deploy Request</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+    <footer>
+        <img src="njugunaTech LOGO.jpeg" alt="njugunaTech Logo" class="footer-avatar-small">
+        <p>&copy; 2026 Alex Njuguna | njugunaTech Engineering</p>
+    </footer>
+
+    <script>
+        // Smooth Tab Switching
+        function showExp(event, roleId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => { content.style.display = 'none'; content.classList.remove('active'); });
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            const target = document.getElementById(roleId);
+            target.style.display = 'block';
+            event.currentTarget.classList.add('active');
+            setTimeout(() => target.classList.add('active'), 10);
+        }
+
+        // Skill Filtering Logic
+        function filterSkills(event, category) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            document.querySelectorAll('.skill-tag').forEach(t => {
+                t.style.display = (category === 'all' || t.getAttribute('data-type') === category) ? "inline-flex" : "none";
+            });
+        }
+
+        // Theme Toggler
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            const btn = document.getElementById('themeBtn');
+            btn.innerHTML = document.body.classList.contains('dark-theme') ? "☀️ Light" : "🌙 Dark";
+        }
+
+        /* CHATBASE ASSISTANt Production ID */
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const s=document.createElement("script");s.src="https://www.chatbase.co/embed.min.js";s.id="FP1K2TK2YL9wUkRvjbPsw";s.domain="www.chatbase.co";document.body.appendChild(s)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+</body>
+</html>
