@@ -193,19 +193,36 @@
             </div>
         </div>
     </section>
+<section id="contact">
+    <div class="contact-container">
+        <form 
+            name="contact" 
+            method="POST" 
+            action="https://formspree.io/f/mnjvpzgr" 
+            class="styled-form"
+        >
+            <h2 class="section-title" style="grid-column: span 2;">Scale Your Project</h2>
+            
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Business Email" required>
+            </div>
+            
+            <div class="form-group full-width">
+                <textarea name="message" rows="5" placeholder="How can njugunaTech help you solve your problem?" required></textarea>
+            </div>
+            
+            <div class="full-width">
+                <button type="submit" class="primary-btn" style="width: 100%;">Deploy Request</button>
+            </div>
+        </form>
+    </div>
+</section>
 
-    <section id="contact">
-        <div class="contact-container">
-            <form name="contact" method="POST" data-netlify="true" class="styled-form">
-                <h2 class="section-title" style="grid-column: span 2;">Scale Your Project</h2>
-                <div class="form-group"><input type="text" name="name" placeholder="Your Name" required></div>
-                <div class="form-group"><input type="email" name="email" placeholder="Business Email" required></div>
-                <div class="form-group full-width"><textarea name="message" rows="5" placeholder="How can njugunaTech help you solve your problem?" required></textarea></div>
-                <div class="full-width"><button type="submit" class="primary-btn" style="width: 100%;">Deploy Request</button></div>
-            </form>
-        </div>
-    </section>
-
+    
     <footer>
         <img src="njugunaTech LOGO.jpeg" alt="njugunaTech Logo" class="footer-avatar-small">
         <p>&copy; 2026 Alex Njuguna | njugunaTech Engineering</p>
@@ -244,4 +261,5 @@
         (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const s=document.createElement("script");s.src="https://www.chatbase.co/embed.min.js";s.id="FP1K2TK2YL9wUkRvjbPsw";s.domain="www.chatbase.co";document.body.appendChild(s)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>
 </body>
+
 </html>
