@@ -1,13 +1,14 @@
-/* NjugunaTech Master Stylesheet 2026 */
+/* NjugunaTech Master Stylesheet 2026 - Branded Version */
 
+/* ================= VARIABLES ================= */
 :root {
-    --primary: #2563eb;
+    --primary: #2563eb;          /* Royal Blue */
     --primary-glow: rgba(37, 99, 235, 0.25);
     --primary-dark: #1d4ed8;
-    --bg-body: #ffffff;
-    --bg-card: #f8fafc;
+    --bg-body: #ffffff;          /* Light mode background */
+    --bg-card: #f8fafc;          /* Card background */
     --section-bg: #f1f5f9;
-    --text-main: #0f172a;
+    --text-main: #000000;        /* Black text */
     --text-dim: #475569;
     --border: #e2e8f0;
     --nav-glass: rgba(255, 255, 255, 0.9);
@@ -15,17 +16,16 @@
 }
 
 .dark-theme {
-    --bg-body: #020617;
-    --bg-card: #0f172a;
-    --section-bg: #0b1120;
-    --text-main: #f1f5f9;
-    --text-dim: #94a3b8;
-    --border: #1e293b;
-    --nav-glass: rgba(2, 6, 23, 0.92);
+    --bg-body: #000000;          /* Dark mode background */
+    --bg-card: #111111;          /* Dark card background */
+    --section-bg: #0a0a0a;
+    --text-main: #ffffff;        /* White text */
+    --text-dim: #a1a1a1;
+    --border: #222222;
+    --nav-glass: rgba(0, 0, 0, 0.9);
 }
 
-/* GLOBAL */
-
+/* ================= GLOBAL ================= */
 * {
     margin: 0;
     padding: 0;
@@ -50,7 +50,6 @@ img {
     height: auto;
 }
 
-/* Section spacing balanced */
 section {
     padding: 80px 6%;
 }
@@ -67,8 +66,7 @@ section {
     text-align: center;
 }
 
-/* NAVIGATION */
-
+/* ================= NAVIGATION ================= */
 .main-nav {
     position: sticky;
     top: 0;
@@ -99,6 +97,7 @@ section {
 .brand-name {
     font-weight: 800;
     font-size: 1.3rem;
+    color: var(--text-main);
 }
 
 .button-nav-group {
@@ -135,8 +134,7 @@ section {
     color: white !important;
 }
 
-/* HERO */
-
+/* ================= HERO ================= */
 .hero {
     display: flex;
     align-items: center;
@@ -206,8 +204,7 @@ section {
     color: var(--primary);
 }
 
-/* Profile Photo */
-
+/* ================= PROFILE PHOTO ================= */
 .photo-container {
     width: 320px;
     height: 320px;
@@ -237,8 +234,7 @@ section {
     box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
 }
 
-/* GRID & CARDS */
-
+/* ================= GRID & CARDS ================= */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -266,8 +262,7 @@ section {
     font-weight: 800;
 }
 
-/* FORM */
-
+/* ================= FORM ================= */
 .contact-container {
     max-width: 850px;
     margin: 0 auto;
@@ -313,10 +308,10 @@ section {
     opacity: 0.7;
 }
 
-/* Dark theme for inputs */
+/* Dark theme inputs */
 body.dark-theme .styled-form input,
 body.dark-theme .styled-form textarea {
-    background: #1f2937; /* dark input bg */
+    background: #111111;
     color: var(--text-main);
 }
 
@@ -334,8 +329,7 @@ body.dark-theme .styled-form textarea::placeholder {
     box-shadow: 0 0 0 4px var(--primary-glow);
 }
 
-/* FOOTER */
-
+/* ================= FOOTER ================= */
 footer {
     text-align: center;
     padding: 50px 6%;
@@ -357,63 +351,20 @@ footer {
     transform: scale(1.1);
 }
 
-/* RESPONSIVE */
-
+/* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
-
-    .nav-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-        min-height: auto;
-        padding: 60px 5%;
-    }
-
-    .hero-text p {
-        max-width: 100%;
-    }
-
-    .btn-group {
-        align-items: center;
-    }
-
-    .main-actions {
-        justify-content: center;
-    }
-
-    .photo-container {
-        width: 260px;
-        height: 260px;
-    }
-
-    .styled-form {
-        grid-template-columns: 1fr;
-        padding: 30px 20px;
-    }
-
-    .full-width {
-        grid-column: span 1;
-    }
+    .nav-container { flex-direction: column; gap: 15px; }
+    .hero { flex-direction: column; text-align: center; gap: 40px; min-height: auto; padding: 60px 5%; }
+    .hero-text p { max-width: 100%; }
+    .btn-group { align-items: center; }
+    .main-actions { justify-content: center; }
+    .photo-container { width: 260px; height: 260px; }
+    .styled-form { grid-template-columns: 1fr; padding: 30px 20px; }
+    .full-width { grid-column: span 1; }
 }
 
 @media (max-width: 768px) {
-
-    section {
-        padding: 70px 5%;
-    }
-
-    .section-title {
-        font-size: 2rem;
-        margin-bottom: 40px;
-    }
-
-    .card {
-        padding: 25px;
-        border-radius: 18px;
-    }
+    section { padding: 70px 5%; }
+    .section-title { font-size: 2rem; margin-bottom: 40px; }
+    .card { padding: 25px; border-radius: 18px; }
 }
