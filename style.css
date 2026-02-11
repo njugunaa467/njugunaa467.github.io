@@ -1,18 +1,24 @@
-/* NjugunaTech Master Stylesheet 2026  */
+/* NjugunaTech Master Stylesheet 2026 — Optimized Responsive Build */
 
 :root {
     --primary: #2563eb;
     --primary-glow: rgba(37, 99, 235, 0.25);
     --primary-dark: #1d4ed8;
+
     --bg-body: #ffffff;
     --bg-card: #f8fafc;
     --section-bg: #f1f5f9;
+
     --text-main: #0f172a;
     --text-dim: #475569;
+
     --border: #e2e8f0;
     --nav-glass: rgba(255, 255, 255, 0.9);
-    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* Dark Mode */
 
 .dark-theme {
     --bg-body: #020617;
@@ -24,19 +30,22 @@
     --nav-glass: rgba(2, 6, 23, 0.92);
 }
 
-/* GLOBAL */
+/* ================= GLOBAL ================= */
 
-* {
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
+    margin: 0;
     font-family: 'Inter', sans-serif;
     background: var(--bg-body);
     color: var(--text-main);
@@ -48,11 +57,11 @@ body {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
-/* Section spacing balanced */
 section {
-    padding: 80px 6%;
+    padding: 90px 6%;
 }
 
 .section-bg {
@@ -60,14 +69,14 @@ section {
 }
 
 .section-title {
-    font-size: 2.6rem;
+    font-size: clamp(2rem, 4vw, 2.6rem);
     font-weight: 800;
     margin-bottom: 50px;
     letter-spacing: -1px;
     text-align: center;
 }
 
-/*  NAVIGATION */
+/* ================= NAVIGATION ================= */
 
 .main-nav {
     position: sticky;
@@ -76,13 +85,16 @@ section {
     background: var(--nav-glass);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
-    padding: 12px 6%;
+    padding: 14px 6%;
 }
 
 .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .brand-identity {
@@ -105,8 +117,9 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 6px;
     background: var(--section-bg);
-    padding: 5px;
+    padding: 6px;
     border-radius: 40px;
     border: 1px solid var(--border);
 }
@@ -119,6 +132,7 @@ section {
     padding: 8px 16px;
     border-radius: 40px;
     transition: var(--transition);
+    white-space: nowrap;
 }
 
 .nav-btn:hover {
@@ -138,16 +152,22 @@ section {
 /* ================= HERO ================= */
 
 .hero {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 60px;
-    padding: 80px 6%;
+    padding: 90px 6%;
     min-height: 85vh;
 }
 
 .highlight {
     color: var(--primary);
+}
+
+.hero-text {
+    flex: 1;
 }
 
 .hero-text h1 {
@@ -188,7 +208,7 @@ section {
 
 .primary-btn:hover {
     background: var(--primary-dark);
-    transform: scale(1.03);
+    transform: translateY(-2px);
 }
 
 .outline-btn {
@@ -206,9 +226,10 @@ section {
     color: var(--primary);
 }
 
-/* Profile Photo */
+/* Profile */
 
 .photo-container {
+    flex-shrink: 0;
     width: 320px;
     height: 320px;
 }
@@ -226,6 +247,8 @@ section {
 /* ================= GRID & CARDS ================= */
 
 .grid {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 24px;
@@ -252,10 +275,10 @@ section {
     font-weight: 800;
 }
 
-/* ================= FORM ================= */
+/* ================= CONTACT FORM ================= */
 
 .contact-container {
-    max-width: 850px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -264,7 +287,7 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     background: var(--bg-card);
-    padding: 40px;
+    padding: 45px;
     border-radius: 24px;
     border: 1px solid var(--border);
 }
@@ -284,6 +307,11 @@ section {
     transition: var(--transition);
 }
 
+.styled-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
 .styled-form input:focus,
 .styled-form textarea:focus {
     outline: none;
@@ -295,7 +323,7 @@ section {
 
 footer {
     text-align: center;
-    padding: 50px 6%;
+    padding: 60px 6%;
     border-top: 1px solid var(--border);
 }
 
@@ -305,7 +333,7 @@ footer {
 
     .nav-container {
         flex-direction: column;
-        gap: 15px;
+        text-align: center;
     }
 
     .hero {
@@ -313,7 +341,7 @@ footer {
         text-align: center;
         gap: 40px;
         min-height: auto;
-        padding: 60px 5%;
+        padding: 70px 6%;
     }
 
     .hero-text p {
@@ -335,7 +363,7 @@ footer {
 
     .styled-form {
         grid-template-columns: 1fr;
-        padding: 30px 20px;
+        padding: 35px 20px;
     }
 
     .full-width {
@@ -359,4 +387,7 @@ footer {
         border-radius: 18px;
     }
 
+    .button-nav-group {
+        justify-content: center;
+    }
 }
