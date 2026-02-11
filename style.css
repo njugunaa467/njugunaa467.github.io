@@ -24,7 +24,7 @@
     --nav-glass: rgba(2, 6, 23, 0.92);
 }
 
-/* ================= GLOBAL ================= */
+/* GLOBAL */
 
 * {
     margin: 0;
@@ -42,7 +42,7 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
-    transition: background 0.4s ease;
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
 img {
@@ -50,6 +50,7 @@ img {
     height: auto;
 }
 
+/* Section spacing balanced */
 section {
     padding: 80px 6%;
 }
@@ -66,7 +67,7 @@ section {
     text-align: center;
 }
 
-/* ================= NAVIGATION ================= */
+/* NAVIGATION */
 
 .main-nav {
     position: sticky;
@@ -82,7 +83,6 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .brand-identity {
@@ -135,7 +135,7 @@ section {
     color: white !important;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero {
     display: flex;
@@ -184,7 +184,6 @@ section {
     text-decoration: none;
     font-weight: 700;
     transition: var(--transition);
-    text-align: center;
 }
 
 .primary-btn:hover {
@@ -207,11 +206,12 @@ section {
     color: var(--primary);
 }
 
-/* ================= PROFILE PHOTO ================= */
+/* Profile Photo */
 
 .photo-container {
     width: 320px;
     height: 320px;
+    position: relative;
 }
 
 .profile-photo {
@@ -224,7 +224,20 @@ section {
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
 }
 
-/* ================= GRID & CARDS ================= */
+.status-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    background: #10b981;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+/* GRID & CARDS */
 
 .grid {
     display: grid;
@@ -253,7 +266,7 @@ section {
     font-weight: 800;
 }
 
-/* ================= FORM ================= */
+/* FORM */
 
 .contact-container {
     max-width: 850px;
@@ -268,13 +281,18 @@ section {
     padding: 40px;
     border-radius: 24px;
     border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
 }
 
 .full-width {
     grid-column: span 2;
 }
 
-/* Input Visibility Fix & Dark Mode Support */
 .styled-form input,
 .styled-form textarea {
     width: 100%;
@@ -295,12 +313,20 @@ section {
     opacity: 0.7;
 }
 
-.dark-theme .styled-form input,
-.dark-theme .styled-form textarea {
-    background: var(--bg-card);
+/* Dark theme for inputs */
+body.dark-theme .styled-form input,
+body.dark-theme .styled-form textarea {
+    background: #1f2937; /* dark input bg */
     color: var(--text-main);
 }
 
+body.dark-theme .styled-form input::placeholder,
+body.dark-theme .styled-form textarea::placeholder {
+    color: var(--text-dim);
+    opacity: 0.6;
+}
+
+/* Focus state */
 .styled-form input:focus,
 .styled-form textarea:focus {
     outline: none;
@@ -308,25 +334,7 @@ section {
     box-shadow: 0 0 0 4px var(--primary-glow);
 }
 
-.submit-btn {
-    grid-column: span 2;
-    padding: 18px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border-radius: 12px;
-    border: none;
-    background: var(--primary);
-    color: #fff;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.submit-btn:hover {
-    background: var(--primary-dark);
-    transform: scale(1.03);
-}
-
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer {
     text-align: center;
@@ -334,7 +342,22 @@ footer {
     border-top: 1px solid var(--border);
 }
 
-/* ================= RESPONSIVE ================= */
+.footer-avatar-small {
+    width: 48px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    opacity: 0.6;
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+
+.footer-avatar-small:hover {
+    opacity: 1;
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE */
 
 @media (max-width: 992px) {
 
@@ -373,8 +396,7 @@ footer {
         padding: 30px 20px;
     }
 
-    .full-width,
-    .submit-btn {
+    .full-width {
         grid-column: span 1;
     }
 }
