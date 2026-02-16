@@ -51,7 +51,13 @@
                     <a href="https://github.com/njugunaa467" target="_blank" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
+        
         </div>
+        <!-- WhatsApp -->
+                <a href="https://wa.me/254793638107" target="_blank" class="social-icon" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
         <div class="hero-image">
             <div class="photo-container circular-frame">
                 <img src="Image.jpeg" alt="Alex Njuguna" class="profile-photo" loading="lazy">
@@ -61,8 +67,7 @@
     </header>
 
     <section id="vision">
-        <div class="container-wide">
-            <h2 class="section-title">The njugunaTech Vision</h2>
+        <div class="container-wide">njugunaTech Vision</h2>
             <div class="vision-box">
                 <div class="vision-content">
                     <i class="fas fa-microchip vision-icon"></i>
@@ -158,19 +163,39 @@
     </section>
 
     <section id="skills">
-        <h2 class="section-title">Tech Stack</h2>
-        <div class="filter-container">
-            <button class="filter-btn active" onclick="filterSkills(event, 'all')">Everything</button>
-            <button class="filter-btn" onclick="filterSkills(event, 'tech')">Software</button>
-            <button class="filter-btn" onclick="filterSkills(event, 'tools')">Design</button>
-        </div>
-        <div class="skill-list">
-            <span class="skill-tag" data-type="tech"><i class="fa-brands fa-python"></i> Python / Django</span>
-            <span class="skill-tag" data-type="tech"><i class="fa-brands fa-js"></i> JavaScript ES6</span>
-            <span class="skill-tag" data-type="tech"><i class="fa-solid fa-database"></i> SQL Databases</span>
-            <span class="skill-tag" data-type="tools"><i class="fa-brands fa-figma"></i> Figma UI/UX</span>
-            <span class="skill-tag" data-type="tools"><i class="fa-solid fa-chart-pie"></i> Data Analytics</span>
-        </div>
+    <h2 class="section-title">Tech Stack & Lab Skills</h2>
+
+    <!-- Filter Buttons -->
+    <div class="filter-container">
+        <button class="filter-btn active" data-category="all">ALL</button>
+        <button class="filter-btn" data-category="tech">Software</button>
+        <button class="filter-btn" data-category="tools">Design</button>
+        <button class="filter-btn" data-category="lab">Lab Skills</button>
+    </div>
+
+    <!-- Skills -->
+    <div class="skill-list">
+        <!-- Software / Frontend -->
+        <span class="skill-tag" data-type="tech"><i class="fa-brands fa-js"></i> JavaScript</span>
+        <span class="skill-tag" data-type="tech"><i class="fa-solid fa-code"></i> HTML5 / CSS3</span>
+        <span class="skill-tag" data-type="tech"><i class="fa-brands fa-python"></i> Python / Django</span>
+        <span class="skill-tag" data-type="tech"><i class="fa-solid fa-database"></i> MySQL</span>
+        <span class="skill-tag" data-type="tech"><i class="fa-brands fa-git-alt"></i> Git / GitHub</span>
+
+        <!-- Design Tools -->
+        <span class="skill-tag" data-type="tools"><i class="fa-brands fa-figma"></i> Figma UI/UX</span>
+        <span class="skill-tag" data-type="tools"><i class="fa-brands fa-canva"></i> Canva</span>
+        <span class="skill-tag" data-type="tools"><i class="fa-solid fa-paint-brush"></i> Photoshop / Illustrator</span>
+
+        <!-- Lab Skills -->
+        <span class="skill-tag" data-type="lab"><i class="fa-solid fa-flask"></i> Gravimetric Analysis</span>
+        <span class="skill-tag" data-type="lab"><i class="fa-solid fa-flask"></i> Filtration & Purification</span>
+        <span class="skill-tag" data-type="lab"><i class="fa-solid fa-flask"></i> Chromatography</span>
+        <span class="skill-tag" data-type="lab"><i class="fa-solid fa-flask"></i> Quality Control</span>
+        <span class="skill-tag" data-type="lab"><i class="fa-solid fa-flask"></i> Analytical Rigor</span>
+    </div>
+</section>
+
     </section>
 
     <section id="projects" class="section-bg">
@@ -222,7 +247,11 @@
     </div>
 </section>
 
-    
+    <!-- WhatsApp link -->
+<a href="https://wa.me/254793638107" target="_blank" class="social-icon" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
     <footer>
         <img src="njugunaTech LOGO.jpeg" alt="njugunaTech Logo" class="footer-avatar-small">
         <p>&copy; 2026 Alex Njuguna | njugunaTech Engineering</p>
@@ -242,13 +271,27 @@
         }
 
         // Skill Filtering Logic
-        function filterSkills(event, category) {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            event.target.classList.add('active');
-            document.querySelectorAll('.skill-tag').forEach(t => {
-                t.style.display = (category === 'all' || t.getAttribute('data-type') === category) ? "inline-flex" : "none";
-            });
-        }
+const skillButtons = document.querySelectorAll('.filter-btn');
+const skillTags = document.querySelectorAll('.skill-tag');
+
+skillButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        skillButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const category = btn.getAttribute('data-category');
+
+        skillTags.forEach(tag => {
+            if (category === 'all' || tag.getAttribute('data-type') === category) {
+                tag.style.display = 'inline-flex';
+            } else {
+                tag.style.display = 'none';
+            }
+        });
+    });
+});
+
 
         // Theme Toggler
         function toggleTheme() {
@@ -263,3 +306,4 @@
 </body>
 
 </html>
+
