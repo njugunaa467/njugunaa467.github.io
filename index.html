@@ -53,10 +53,6 @@
             </div>
         
         </div>
-        <!-- WhatsApp -->
-                <a href="https://wa.me/254793638107" target="_blank" class="social-icon" aria-label="WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i>
-        </a>
 
         <div class="hero-image">
             <div class="photo-container circular-frame">
@@ -66,8 +62,14 @@
         </div>
     </header>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/254793638107" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
     <section id="vision">
-        <div class="container-wide">njugunaTech Vision</h2>
+        <div class="container-wide">
+            <h2>njugunaTech Vision</h2>
             <div class="vision-box">
                 <div class="vision-content">
                     <i class="fas fa-microchip vision-icon"></i>
@@ -79,26 +81,33 @@
     </section>
 
     <section id="services" class="section-bg">
-        <div class="container-wide">
-            <h2 class="section-title">Core Services</h2>
-            <div class="grid">
-                <div class="card service-card">
-                    <i class="fas fa-terminal service-icon"></i>
-                    <h3>Custom Web Engineering</h3>
-                    <p>Development of high-performance front-end architectures that prioritize speed, accessibility, and user conversion logic.</p>
-                </div>
-                <div class="card service-card">
-                    <i class="fas fa-database service-icon"></i>
-                    <h3>Business Systems Logic</h3>
-                    <p>Architecting backend systems and database structures that manage complex data flows and automate manual workflows.</p>
-                </div>
-                <div class="card service-card">
-                    <i class="fas fa-search-nodes service-icon"></i>
-                    <h3>Technical Auditing</h3>
-                    <p>Rigorous analysis of existing systems to identify performance bottlenecks and ensure long-term scalability.</p>
-                </div>
+    <div class="container-wide">
+        <h2 class="section-title">Core Services</h2>
+        <div class="grid">
+            <div class="card service-card">
+                <i class="fas fa-terminal service-icon"></i>
+                <h3>Custom Web Engineering</h3>
+                <p>Development of high-performance front-end architectures that prioritize speed, accessibility, and user conversion logic.</p>
+            </div>
+            <div class="card service-card">
+                <i class="fas fa-database service-icon"></i>
+                <h3>Business Systems Logic</h3>
+                <p>Architecting backend systems and database structures that manage complex data flows and automate manual workflows.</p>
+            </div>
+            <div class="card service-card">
+                <i class="fas fa-search-nodes service-icon"></i>
+                <h3>Technical Auditing</h3>
+                <p>Rigorous analysis of existing systems to identify performance bottlenecks and ensure long-term scalability.</p>
+            </div>
+            <div class="card service-card">
+                <i class="fas fa-palette service-icon"></i>
+                <h3>Graphic Design</h3>
+                <p>Creating visually stunning graphics and brand assets that communicate your business story and elevate your brand identity across all platforms.</p>
             </div>
         </div>
+    </div>
+</section>
+
     </section>
 
     <section id="workflow">
@@ -162,40 +171,69 @@
         </div>
     </section>
 
+    <!-- Updated Tech Stack Section -->
     <section id="skills">
-    <h2 class="section-title">Tech Stack & Lab Skills</h2>
+        <h2 class="section-title">Tech Stack & Lab Skills</h2>
 
-    <!-- Filter Buttons -->
-    <div class="filter-container">
-        <button class="filter-btn active" data-category="all">ALL</button>
-        <button class="filter-btn" data-category="tech">Software</button>
-        <button class="filter-btn" data-category="tools">Design</button>
-        <button class="filter-btn" data-category="lab">Lab Skills</button>
-    </div>
+        <div class="skill-cards-grid">
+            <!-- Software -->
+            <div class="skill-card">
+                <i class="fa-brands fa-js"></i>
+                <h4>JavaScript</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-code"></i>
+                <h4>HTML5 / CSS3</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-python"></i>
+                <h4>Python / Django</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-database"></i>
+                <h4>MySQL</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-git-alt"></i>
+                <h4>Git / GitHub</h4>
+            </div>
 
-    <!-- Skills -->
-    <div class="skill-list">
-        <!-- Software / Frontend -->
-        <span class="skill-tag" data-type="tech"><i class="fa-brands fa-js"></i> JavaScript</span>
-        <span class="skill-tag" data-type="tech"><i class="fa-solid fa-code"></i> HTML5 / CSS3</span>
-        <span class="skill-tag" data-type="tech"><i class="fa-brands fa-python"></i> Python / Django</span>
-        <span class="skill-tag" data-type="tech"><i class="fa-solid fa-database"></i> MySQL</span>
-        <span class="skill-tag" data-type="tech"><i class="fa-brands fa-git-alt"></i> Git / GitHub</span>
+            <!-- Design -->
+            <div class="skill-card">
+                <i class="fa-brands fa-figma"></i>
+                <h4>Figma UI/UX</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-canva"></i>
+                <h4>Canva</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-paint-brush"></i>
+                <h4>Photoshop / Illustrator</h4>
+            </div>
 
-        <!-- Design Tools -->
-        <span class="skill-tag" data-type="tools"><i class="fa-brands fa-figma"></i> Figma UI/UX</span>
-        <span class="skill-tag" data-type="tools"><i class="fa-brands fa-canva"></i> Canva</span>
-        <span class="skill-tag" data-type="tools"><i class="fa-solid fa-paint-brush"></i> Photoshop / Illustrator</span>
-
-        <!-- Lab Skills -->
-        <span class="skill-tag" data-type="lab"><i class="fa-solid fa-flask"></i> Gravimetric Analysis</span>
-        <span class="skill-tag" data-type="lab"><i class="fa-solid fa-flask"></i> Filtration & Purification</span>
-        <span class="skill-tag" data-type="lab"><i class="fa-solid fa-flask"></i> Chromatography</span>
-        <span class="skill-tag" data-type="lab"><i class="fa-solid fa-flask"></i> Quality Control</span>
-        <span class="skill-tag" data-type="lab"><i class="fa-solid fa-flask"></i> Analytical Rigor</span>
-    </div>
-</section>
-
+            <!-- Lab -->
+            <div class="skill-card">
+                <i class="fa-solid fa-flask"></i>
+                <h4>Gravimetric Analysis</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-flask"></i>
+                <h4>Filtration & Purification</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-flask"></i>
+                <h4>Chromatography</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-flask"></i>
+                <h4>Quality Control</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-flask"></i>
+                <h4>Analytical Rigor</h4>
+            </div>
+        </div>
     </section>
 
     <section id="projects" class="section-bg">
@@ -218,39 +256,35 @@
             </div>
         </div>
     </section>
-<section id="contact">
-    <div class="contact-container">
-        <form 
-            name="contact" 
-            method="POST" 
-            action="https://formspree.io/f/mnjvpzgr" 
-            class="styled-form"
-        >
-            <h2 class="section-title" style="grid-column: span 2;">Scale Your Project</h2>
-            
-            <div class="form-group">
-                <input type="text" name="name" placeholder="Your Name" required>
-            </div>
-            
-            <div class="form-group">
-                <input type="email" name="email" placeholder="Business Email" required>
-            </div>
-            
-            <div class="form-group full-width">
-                <textarea name="message" rows="5" placeholder="How can njugunaTech help you solve your problem?" required></textarea>
-            </div>
-            
-            <div class="full-width">
-                <button type="submit" class="primary-btn" style="width: 100%;">Deploy Request</button>
-            </div>
-        </form>
-    </div>
-</section>
 
-    <!-- WhatsApp link -->
-<a href="https://wa.me/254793638107" target="_blank" class="social-icon" aria-label="WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
+    <section id="contact">
+        <div class="contact-container">
+            <form 
+                name="contact" 
+                method="POST" 
+                action="https://formspree.io/f/mnjvpzgr" 
+                class="styled-form"
+            >
+                <h2 class="section-title" style="grid-column: span 2;">Scale Your Project</h2>
+                
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Business Email" required>
+                </div>
+                
+                <div class="form-group full-width">
+                    <textarea name="message" rows="5" placeholder="How can njugunaTech help you solve your problem?" required></textarea>
+                </div>
+                
+                <div class="full-width">
+                    <button type="submit" class="primary-btn" style="width: 100%;">Deploy Request</button>
+                </div>
+            </form>
+        </div>
+    </section>
 
     <footer>
         <img src="njugunaTech LOGO.jpeg" alt="njugunaTech Logo" class="footer-avatar-small">
@@ -271,27 +305,24 @@
         }
 
         // Skill Filtering Logic
-const skillButtons = document.querySelectorAll('.filter-btn');
-const skillTags = document.querySelectorAll('.skill-tag');
+        const skillButtons = document.querySelectorAll('.filter-btn');
+        const skillCards = document.querySelectorAll('.skill-card');
 
-skillButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        // Remove active class from all buttons
-        skillButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        skillButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                skillButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
 
-        const category = btn.getAttribute('data-category');
-
-        skillTags.forEach(tag => {
-            if (category === 'all' || tag.getAttribute('data-type') === category) {
-                tag.style.display = 'inline-flex';
-            } else {
-                tag.style.display = 'none';
-            }
+                const category = btn.getAttribute('data-category');
+                skillCards.forEach(card => {
+                    if(category === 'all' || card.dataset.type === category){
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
         });
-    });
-});
-
 
         // Theme Toggler
         function toggleTheme() {
@@ -300,10 +331,8 @@ skillButtons.forEach(btn => {
             btn.innerHTML = document.body.classList.contains('dark-theme') ? "☀️ Light" : "🌙 Dark";
         }
 
-        /*  CHATBASE ASSISTANT: Production ID */
+        // Chatbase
         (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const s=document.createElement("script");s.src="https://www.chatbase.co/embed.min.js";s.id="FP1K2TK2YL9wUkRvjbPsw";s.domain="www.chatbase.co";document.body.appendChild(s)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>
 </body>
-
 </html>
-
