@@ -1,183 +1,201 @@
-/* BASIC RESET */
-* {
+/* General Resets & Typography*/
+body {
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    background-color: #0f0f15;
+    color: #f5f5f5;
 }
 
-/* THEME COLORS */
-:root {
-    --primary-color: #4169E1; 
-    --secondary-color: #000000; 
-    --accent-color: #FFFFFF; 
-} /* <-- closed properly */
+h2.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    color: #00d4ff;
+}
 
-/* BODY */
-body {
-    background-color: var(--secondary-color);
-    color: var(--accent-color);
+p {
     line-height: 1.6;
+    color: #cfcfcf;
 }
 
-/* NAVIGATION */
-.main-nav {
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content: center;
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-.nav-btn {
-    color: var(--accent-color);
-    margin: 0 0.5rem;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.nav-btn.active,
-.nav-btn:hover {
-    color: var(--primary-color);
-}
-
-.contact-pill {
-    border: 2px solid var(--primary-color);
-    padding: 0.3rem 0.8rem;
-    border-radius: 25px;
-}
-
-/* HERO SECTION */
+/*Hero Section */
 .hero {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 4rem 2rem;
+    align-items: center;
+    padding: 3rem 2rem;
+    position: relative;
 }
 
 .hero-text {
-    max-width: 600px;
+    flex: 1 1 500px;
 }
 
-.highlight {
-    color: var(--primary-color);
-}
-
-.primary-btn {
-    background-color: var(--primary-color);
-    color: var(--accent-color);
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.primary-btn:hover {
-    opacity: 0.9;
-}
-
-.outline-btn {
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-}
-
-/* SECTIONS */
-.section-title {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-}
-
-.section-bg {
-    background-color: #111111;
-    padding: 4rem 2rem;
-}
-
-.grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-/* CARDS */
-.card {
-    background-color: #1c1c1c;
-    padding: 1.5rem;
-    border-radius: 12px;
-}
-
-.service-icon {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 0.8rem;
-}
-
-/* SKILL FILTER BUTTONS */
-.filter-container {
-    margin-bottom: 1rem;
-}
-
-.filter-btn {
-    background-color: #333333;
-    color: #ffffff;
-    border: 1px solid #555;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    margin-right: 0.5rem;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out;
-}
-
-.filter-btn.active,
-.filter-btn:hover {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-/* SKILL TAGS */
-.skill-list {
+.hero-image {
+    flex: 1 1 300px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    justify-content: center;
 }
 
-.skill-tag {
-    background-color: #1c1c1c;
-    color: #ffffff;
-    border: 1px solid var(--primary-color);
-    padding: 0.4rem 0.8rem;
-    border-radius: 5px;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
+.circular-frame {
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.status-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00d4ff;
+    color: #000;
+    padding: 0.3rem 0.8rem;
+    font-weight: 600;
+    border-radius: 20px;
     font-size: 0.9rem;
 }
 
-/* SOCIAL ICONS */
-.social-icon {
-    display: inline-flex;
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    z-index: 999;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Tech Stack Cards */
+.skill-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+    justify-items: center;
+}
+
+.skill-card {
+    background: #1a1a28;
+    border-radius: 12px;
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    color: #25D366; /* WhatsApp green */
-    margin-right: 0.5rem;
-    transition: transform 0.2s;
-}
-
-.social-icon:hover {
-    transform: scale(1.2);
-    color: #1ebe57; /* slightly darker on hover */
-}
-
-/* FOOTER */
-footer {
     text-align: center;
-    padding: 2rem;
-    background-color: #111111;
-    margin-top: 2rem;
+    transition: transform 0.2s ease, background 0.2s ease;
+    cursor: default;
+    width: 140px;
+}
+
+.skill-card i {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+    color: #00d4ff;
+}
+
+.skill-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f5f5f5;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    background: #272736;
+}
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-image {
+        margin-top: 1rem;
+    }
+
+    .skill-cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .skill-card {
+        width: 120px;
+        padding: 1rem 0.8rem;
+    }
+}
+
+/* Tab Content Animations */
+.tab-content {
+    transition: all 0.3s ease;
+}
+
+.tab-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Backgrounds*/
+ 
+.section-bg {
+    background: #12121b;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+/*  Buttons */
+.primary-btn {
+    background-color: #00d4ff;
+    color: #000;
+    padding: 0.7rem 1.3rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    background-color: #00b2cc;
+}
+
+/* Optional: Filter Buttons*/
+.filter-btn {
+    border: 1px solid #00d4ff;
+    background: transparent;
+    color: #00d4ff;
+    padding: 0.4rem 0.8rem;
+    margin: 0 0.3rem 0.5rem 0.3rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: #00d4ff;
+    color: #000;
 }
