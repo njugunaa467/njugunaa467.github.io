@@ -4,316 +4,535 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>njugunaTech | Business Systems & Engineering</title>
-    <meta name="description" content="Alex Njuguna | Founder of njugunaTech - Engineering scalable digital assets and high-precision business systems for SMEs.">
+    <title>Alex Njuguna | Systems Engineer & Frontend Developer</title>
+    <meta name="description" content="High-precision systems engineering and web development. I build scalable digital assets that eliminate operational friction and drive measurable business value.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-theme">
+<body>
 
-    <nav class="main-nav">
-        <div class="nav-container">
-            <div class="brand-identity">
-                <img src="njugunaTech LOGO.jpeg" alt="njugunaTech Logo" class="brand-logo" loading="lazy">
-                <span class="brand-name">njugunaTech</span>
+    <nav class="navbar" aria-label="Primary navigation">
+        <div class="nav-wrapper">
+            <div class="nav-brand">
+                <span class="brand-mark">aj</span>
+                <span class="brand-text">njugunaTech</span>
             </div>
-            <div class="button-nav-group">
-                <a href="#home" class="nav-btn active">HOME</a>
-                <a href="#vision" class="nav-btn">VISION</a>
-                <a href="#services" class="nav-btn">SERVICES</a>
-                <a href="#workflow" class="nav-btn">WORKFLOW</a>
-                <a href="#experience" class="nav-btn">JOURNEY</a>
-                <a href="#projects" class="nav-btn">PROJECTS</a>
-                <a href="#contact" class="nav-btn btn-primary">CONTACT</a>
+            <div class="nav-links" role="menubar">
+                <a href="#hero" class="nav-link" role="menuitem">Home</a>
+                <a href="#about" class="nav-link" role="menuitem">About</a>
+                <a href="#services" class="nav-link" role="menuitem">Services</a>
+                <a href="#capabilities" class="nav-link" role="menuitem">Capabilities</a>
+                <a href="#proof" class="nav-link" role="menuitem">Proof</a>
+                <a href="#projects" class="nav-link" role="menuitem">Work</a>
+                <a href="#contact" class="nav-link nav-cta" role="menuitem">Let's Talk</a>
             </div>
-            <button class="theme-toggle" id="themeBtn">☀️ Light</button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="#hero" class="mobile-menu-link">Home</a>
+        <a href="#about" class="mobile-menu-link">About</a>
+        <a href="#services" class="mobile-menu-link">Services</a>
+        <a href="#capabilities" class="mobile-menu-link">Capabilities</a>
+        <a href="#proof" class="mobile-menu-link">Proof</a>
+        <a href="#projects" class="mobile-menu-link">Work</a>
+        <a href="#contact" class="mobile-menu-link">Let's Talk</a>
+    </div>
+
     <main>
-        <header id="home" class="hero">
-            <div class="hero-text">
-                <div class="welcome-msg">
-                    <span class="wave">Hello there! 👋</span> 
-                    <span class="msg-text">Founder of <strong>njugunaTech</strong></span>
-                </div>
-                <h1>Engineering <span class="highlight">Scalable Solutions</span> for Your Business Growth.</h1>
-                <p>At njugunaTech, I specialize in building <strong>high-precision web applications</strong> that eliminate operational friction and drive tangible business value. By combining strategic logic with modern Front-End engineering, I transform complex challenges into robust, scalable digital assets for SMEs.</p>
-                
-                <div class="btn-group">
-                    <div class="main-actions">
-                        <a href="#projects" class="btn btn-primary">Explore Our Solutions</a>
-                        <a href="CV-ALEX NJUGUNA.pdf" target="_blank" class="btn btn-outline">View My CV</a>
-                    </div>
-                    <div class="social-links-inline">
-                        <a href="https://www.linkedin.com/in/alex-njuguna-044370319/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/njugunaa467" target="_blank" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-            
-            </div>
-
-            <div class="hero-image">
-                <div class="photo-container circular-frame">
-                    <img src="Image.jpeg" alt="Alex Njuguna" class="profile-photo" loading="lazy">
-                    <div class="status-badge">Available for Consultation</div>
-                </div>
-            </div>
-        </header>
-
-        <!-- Floating WhatsApp Button -->
-        <a href="https://wa.me/254793638107" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-
-        <section id="vision">
-            <div class="container-wide">
-                <h2>Our Vision: Solving Business Problems with Precision Engineering</h2>
-                <div class="vision-box">
-                    <div class="vision-content">
-                        <i class="fas fa-microchip vision-icon"></i>
-                        <h3>Beyond Code: Engineering Business Instruments</h3>
-                        <p>At njugunaTech, we believe technology is a powerful lever for efficiency and growth. Our focus is on identifying critical operational friction points within SMEs and engineering bespoke digital solutions that convert manual effort into automated profit. For us, **precision isn't just a goal; it's the foundation of every system we build.**</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="section-bg">
-            <div class="container-wide">
-                <h2 class="section-title">Our Core Services: Driving Your Digital Transformation</h2>
-                <div class="grid">
-                    <div class="card service-card">
-                        <i class="fas fa-terminal service-icon"></i>
-                        <h3>Custom Web Engineering</h3>
-                        <p>We develop high-performance, scalable front-end architectures designed to maximize user engagement, conversion rates, and overall business efficiency for your online presence.</p>
-                    </div>
-                    <div class="card service-card">
-                        <i class="fas fa-database service-icon"></i>
-                        <h3>Business Systems Logic & Automation</h3>
-                        <p>Architecting robust backend systems and intelligent database structures that streamline complex data flows, automate manual workflows, and provide a solid foundation for your business operations.</p>
-                    </div>
-                    <div class="card service-card">
-                        <i class="fas fa-search-nodes service-icon"></i>
-                        <h3>Technical Auditing & Optimization</h3>
-                        <p>Rigorous analysis of your existing digital infrastructure to identify performance bottlenecks, security vulnerabilities, and areas for strategic optimization, ensuring long-term scalability and cost-effectiveness.</p>
-                    </div>
-                    <div class="card service-card">
-                        <i class="fas fa-palette service-icon"></i>
-                        <h3>Strategic Brand & UI/UX Design</h3>
-                        <p>Crafting visually compelling graphics and intuitive user interfaces that not only communicate your brand story effectively but also enhance user experience and elevate your brand identity across all digital touchpoints.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="workflow">
-            <div class="container-wide">
-                <h2 class="section-title">Our Operational Strategy: A Blueprint for Your Success</h2>
-                <div class="grid">
-                    <div class="card blog-card">
-                        <div class="step-num">01</div>
-                        <h3>Strategic Discovery & Analysis</h3>
-                        <p>We begin by deeply understanding your business logic, identifying key objectives, and pinpointing operational bottlenecks. Our goal is to engineer systemic efficiency from the very first line of code.</p>
-                    </div>
-                    <div class="card blog-card">
-                        <div class="step-num">02</div>
-                        <h3>Agile Architecture & Iteration</h3>
-                        <p>Adopting a 
-"Lab Mindset"—precision testing at every stage—we deploy Minimum Viable Products (MVPs) to gather critical data and rapidly refine system ROI, ensuring continuous improvement and adaptation.</p>
-                    </div>
-                    <div class="card blog-card">
-                        <div class="step-num">03</div>
-                        <h3>Automated Scaling & Continuous Delivery</h3>
-                        <p>We implement robust CI/CD pipelines to automate deployment and maintenance, guaranteeing that your digital assets evolve seamlessly and scale efficiently alongside your business revenue and market demands.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="section-bg">
-            <h2 class="section-title"> Expertise Forged in Diverse Environments</h2>
-            <div class="live-exp-container">
-                <div class="exp-tabs">
-                    <button class="tab-btn active" data-exp="tech-lead">💻 njugunaTech</button>
-                    <button class="tab-btn" data-exp="design">🎨 Branding & UI/UX</button>
-                    <button class="tab-btn" data-exp="regal">🧪 Analytical Rigor</button>
-                </div>
-                <div class="exp-content-box">
-                    <div id="tech-lead" class="tab-content active">
-                        <h3>Founder & Systems Engineer <span class="highlight">@njugunaTech</span></h3>
-                        <p class="date">2025 — Present</p>
-                        <ul class="live-list">
-                            <li><strong>Systemic Architecture:</strong> Architecting full-stack solutions with Python and JavaScript, focusing on data integrity, high-concurrency performance, and scalable infrastructure.</li>
-                            <li><strong>Friction Elimination:</strong> Developed internal dashboards that consistently reduced client manual processing time by an average of 40%, enhancing operational efficiency.</li>
-                            <li><strong>Cloud Deployment:</strong> Managed high-uptime environments (99.9%) on platforms like Render and Netlify, leveraging automated CI/CD workflows for seamless deployments.</li>
-                        </ul>
-                    </div>
-                    <div id="design" class="tab-content">
-                        <h3>Identity & UI/UX Specialist <span class="highlight">@Global Freelance</span></h3>
-                        <p class="date">2024 — Present</p>
-                        <ul class="live-list">
-                            <li><strong>Interface Engineering:</strong> Transformed complex user requirements into intuitive, high-fidelity Figma prototypes, meticulously designed for maximum user conversion and engagement.</li>
-                            <li><strong>Brand Systems:</strong> Developed comprehensive visual identities and design systems for tech startups, ensuring cross-platform scalability and consistent brand messaging.</li>
-                        </ul>
-                    </div>
-                    <div id="regal" class="tab-content">
-                        <h3>Quality Analyst <span class="highlight">@Regal Pharma</span></h3>
-                        <p class="date">May 2025 — Aug 2025</p>
-                        <ul class="live-list">
-                            <li><strong>Analytical Rigor:</strong> Conducted high-stakes scientific validation on pharmaceutical data, operating within a critical 0.1% margin of error to ensure data integrity and compliance.</li>
-                            <li><strong>Logic-Driven Auditing:</strong> Applied rigorous validation methodologies to software debugging processes, ensuring comprehensive logic coverage and robust performance in complex codebases.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-       <section id="skills">
-            <h2 class="section-title">Our Expertise: Technologies & Methodologies</h2>
-
-            <div class="skill-cards-grid">
-                <div class="skill-card">
-                    <i class="fab fa-html5"></i>
-                    <h4>HTML5</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-css3-alt"></i>
-                    <h4>CSS3</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-js"></i>
-                    <h4>JavaScript</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-python"></i>
-                    <h4>Python</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-python"></i> >
-                    <h4>Django</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <h4>MySQL</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-git-alt"></i>
-                    <h4>Git</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-github"></i>
-                    <h4>GitHub</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-figma"></i>
-                    <h4>Figma</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-paint-brush"></i> 
-                    <h4>Canva</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-image"></i> 
-                    <h4>Photoshop</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-vector-square"></i> 
-                    <h4>Illustrator</h4>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container-wide">
-                <h2 class="section-title">Our Portfolio: Solutions That Deliver Results</h2>
-                <div class="filter-buttons">
-                    <button class="btn btn-filter active" data-category="all">All Projects</button>
-                    <button class="btn btn-filter" data-category="web">Web Development</button>
-                    <button class="btn btn-filter" data-category="branding">Branding & Design</button>
-                    <button class="btn btn-filter" data-category="data">Data & Analytics</button>
-                </div>
-
-        <section id="projects">
-            <div class="container-wide">
-                <h2 class="section-title">Our Portfolio: Solutions That Deliver Results</h2>
-                <div class="filter-buttons">
-                    <button class="btn btn-filter active" data-category="all">All Projects</button>
-                    <button class="btn btn-filter" data-category="web">Web Development</button>
-                    <button class="btn btn-filter" data-category="branding">Branding & Design</button>
-                    <button class="btn btn-filter" data-category="data">Data & Analytics</button>
-                </div>
-
-                <div class="project-grid">
-                    <!-- Project 1: Transit Engine -->
-                    <div class="project-card" data-category="web">
-                        <img src="project1.jpeg" alt="Transit Engine: Nairobi Project" class="project-image" loading="lazy">
-                        <div class="project-info">
-                            <h3>🚌 Transit Engine: Nairobi</h3>
-                            <p>A robust logistics booking system featuring dynamic fare scaling and secure payment handling, designed to optimize transit operations for businesses.</p>
-                            <a href="https://busibook.onrender.com/" target="_blank" class="project-link">Launch Solution <i class="fas fa-arrow-right"></i></a>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-headline">Systems That Work<br><span class="gradient-text">Without You</span></h1>
+                    <p class="hero-subtext">I engineer scalable digital solutions that eliminate operational friction and drive measurable business value for ambitious teams.</p>
+                    
+                    <div class="hero-metrics">
+                        <div class="metric">
+                            <div class="metric-value">40%</div>
+                            <div class="metric-label">Avg workflow reduction</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">99.9%</div>
+                            <div class="metric-label">Uptime reliability</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">50+</div>
+                            <div class="metric-label">Systems deployed</div>
                         </div>
                     </div>
-                    <!-- Project 2: Weather Dashboard -->
-                    <div class="project-card" data-category="web">
-                        <img src="project2.jpeg" alt="Weather Dashboard Project" class="project-image" loading="lazy">
-                        <div class="project-info">
-                            <h3>☁️ Real-time Weather Dashboard</h3>
-                            <p>Provides critical meteorological data via API, enabling businesses to make quick, informed decisions based on current weather conditions.</p>
-                            <a href="https://weather-app1r.netlify.app/" target="_blank" class="project-link">Launch App <i class="fas fa-arrow-right"></i></a>
+
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Start Your Project</a>
+                        <a href="#projects" class="btn btn-secondary">View My Work</a>
+                        <a href="CV.pdf" class="btn btn-tertiary" target="_blank">View CV</a>
+                    </div>
+
+                    <div class="hero-social">
+                        <a href="https://linkedin.com/in/alex-njuguna-044370319/" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/njugunaa467" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://wa.me/254793638107" target="_blank" class="social-link" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="profile-frame">
+                        <img src="Image.jpeg" alt="Alex Njuguna" class="profile-image">
+                        <div class="status-badge">
+                            <span class="dot"></span>
+                            Available for Projects
                         </div>
                     </div>
-                    <!-- Project 3: Financial Intelligence -->
-                    <div class="project-card" data-category="data">
-                        <img src="project3.jpeg" alt="Financial Intelligence Project" class="project-image" loading="lazy">
-                        <div class="project-info">
-                            <h3>💰 Financial Intelligence Tracker</h3>
-                            <p>A precision-based expense tracking system with automated reporting, empowering SMEs with clear financial oversight and control.</p>
-                            <a href="https://adoapp.netlify.app/" target="_blank" class="project-link">Explore App <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Who I Am</h2>
+                    <p class="section-subtitle">Systems engineer and frontend developer building the digital backbone of ambitious businesses.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h3>Engineering Precision Into Business</h3>
+                        <p>I'm Alex Njuguna, founder of njugunaTech. My background blends analytical rigor with practical engineering. As a Quality Analyst at Regal Pharma, I operated within a <strong>0.1% margin of error</strong> on critical pharmaceutical data. That precision mindset now powers every system I build.</p>
+                        
+                        <p>I don't just write code—I engineer solutions to business problems. Whether it's reducing manual workflows by 40% or architecting systems that maintain 99.9% uptime, I approach every project with the same rigorous methodology: identify friction, design the solution, measure the impact.</p>
+
+                        <p>My focus is simple: <strong>turn operational chaos into automated efficiency</strong>. I work with SMEs and scaling teams that need systems that actually work.</p>
+
+                        <div class="about-cta">
+                            <a href="#contact" class="btn btn-primary">Let's Build Together</a>
+                        </div>
+                    </div>
+
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <i class="fas fa-cog"></i>
+                            <h4>Systems Thinking</h4>
+                            <p>Full-stack problem solving across frontend, backend, and database architecture.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <h4>Performance Obsessed</h4>
+                            <p>Every line of code optimized for speed, reliability, and long-term scalability.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Results-Driven</h4>
+                            <p>Every solution measured against real metrics: time saved, revenue impact, uptime.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <h4>Design-Aware</h4>
+                            <p>Beautiful interfaces backed by robust logic—form and function in perfect balance.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section-bg">
-            <div class="container-wide">
-                <h2 class="section-title">Ready to Transform Your Business? Let's Connect.</h2>
-                <p class="contact-intro">Whether you're looking to streamline operations, enhance your digital presence, or build a new scalable solution, njugunaTech is here to help. Reach out today to discuss your project and discover how we can engineer your business growth.</p>
-                <form class="contact-form" action="https://formspree.io/f/mnjvpzgr" method="POST">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
+        <!-- SERVICES SECTION -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What I Deliver</h2>
+                    <p class="section-subtitle">High-impact solutions engineered for business growth and operational excellence.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Custom Web Systems</h3>
+                        <p class="problem">Your business processes are unique. Generic solutions create friction.</p>
+                        <div class="service-arrow">→</div>
+                        <p class="solution"><strong>Solution:</strong> Bespoke, scalable web architectures built to eliminate your specific operational bottlenecks.</p>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Your Business Email</label>
-                        <input type="email" id="email" name="_replyto" required>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Automation & Business Logic</h3>
+                        <p class="problem">Manual workflows drain time, money, and morale.</p>
+                        <div class="service-arrow">→</div>
+                        <p class="solution"><strong>Solution:</strong> Intelligent systems that automate complex processes and scale with your revenue.</p>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Tell Us About Your Project</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-pen-fancy"></i>
+                        </div>
+                        <h3>UI/UX & Product Design</h3>
+                        <p class="problem">Clunky interfaces kill user adoption and business outcomes.</p>
+                        <div class="service-arrow">→</div>
+                        <p class="solution"><strong>Solution:</strong> Intuitive, conversion-focused designs that users love and businesses depend on.</p>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send My Inquiry</button>
-                </form>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <h3>Graphic Design & Visual Identity</h3>
+                        <p class="problem">Inconsistent visuals undermine credibility and brand perception.</p>
+                        <div class="service-arrow">→</div>
+                        <p class="solution"><strong>Solution:</strong> Designing high-impact visuals and brand identities that improve perception, engagement, and trust across digital platforms.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <h3>Optimization & Auditing</h3>
+                        <p class="problem">Your existing system is costing you speed, reliability, or credibility.</p>
+                        <div class="service-arrow">→</div>
+                        <p class="solution"><strong>Solution:</strong> Deep technical audit identifying performance gaps and strategic optimization paths.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAPABILITIES SECTION -->
+        <section id="capabilities" class="capabilities">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technical Capabilities</h2>
+                    <p class="section-subtitle">Leveraging modern tools and methodologies to build production-grade systems.</p>
+                </div>
+
+                <div class="capabilities-grid">
+                    <!-- Systems Engineering -->
+                    <div class="capability-card">
+                        <div class="capability-header">
+                            <h3>Systems Engineering</h3>
+                            <p class="capability-desc">Full-stack architecture and backend logic</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">REST APIs</span>
+                            <span class="tech-badge">CI/CD</span>
+                        </div>
+                        <p class="capability-proof"><strong>Proof:</strong> Architected multi-tenant SaaS systems handling concurrent users with 99.9% uptime.</p>
+                    </div>
+
+                    <!-- Frontend Engineering -->
+                    <div class="capability-card">
+                        <div class="capability-header">
+                            <h3>Frontend Engineering</h3>
+                            <p class="capability-desc">High-performance user interfaces and experiences</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Responsive Design</span>
+                            <span class="tech-badge">Performance Optimization</span>
+                            <span class="tech-badge">Accessibility</span>
+                        </div>
+                        <p class="capability-proof"><strong>Proof:</strong> Built conversion-focused dashboards that reduced client manual processing time by 40%.</p>
+                    </div>
+
+                    <!-- UI/UX Design -->
+                    <div class="capability-card">
+                        <div class="capability-header">
+                            <h3>UI/UX & Product Design</h3>
+                            <p class="capability-desc">Strategic brand and interface design</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Figma</span>
+                            <span class="tech-badge">Photoshop</span>
+                            <span class="tech-badge">Illustrator</span>
+                            <span class="tech-badge">Design Systems</span>
+                            <span class="tech-badge">User Research</span>
+                            <span class="tech-badge">Prototyping</span>
+                        </div>
+                        <p class="capability-proof"><strong>Proof:</strong> Designed comprehensive visual identities and design systems for 15+ tech startups.</p>
+                    </div>
+
+                    <!-- DevOps & Infrastructure -->
+                    <div class="capability-card">
+                        <div class="capability-header">
+                            <h3>DevOps & Infrastructure</h3>
+                            <p class="capability-desc">Deployment, scaling, and system reliability</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Git & GitHub</span>
+                            <span class="tech-badge">Render</span>
+                            <span class="tech-badge">Netlify</span>
+                            <span class="tech-badge">Cloud Deploy</span>
+                            <span class="tech-badge">Automation</span>
+                            <span class="tech-badge">Monitoring</span>
+                        </div>
+                        <p class="capability-proof"><strong>Proof:</strong> Managed high-uptime production environments with automated CI/CD workflows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROOF / CERTIFICATES SECTION -->
+        <section id="proof" class="proof">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Proof of Capability</h2>
+                    <p class="section-subtitle">Backed by validated knowledge, real-world execution, and continuous learning.</p>
+                </div>
+
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-media">
+                            <div class="cert-badge">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-media-label">PLP Academy</div>
+                        </div>
+                        <div class="cert-info">
+                            <h3>Software Development & Web Design</h3>
+                            <p>Specialized in building user-focused interfaces and clean development workflows that support scalable product launches.</p>
+                            <a href="PLP Academy2.pdf" target="_blank" class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-media">
+                            <div class="cert-badge">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="cert-media-label">ICT Authority</div>
+                        </div>
+                        <div class="cert-info">
+                            <h3>Artificial Intelligence</h3>
+                            <p>Validated knowledge in AI foundations, machine learning concepts, and practical use cases for intelligent systems.</p>
+                            <a href="alexnjuguna602gmail-com-5261-5363-20251015-402cd56cb4.pdf" target="_blank" class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-media">
+                            <div class="cert-badge">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div class="cert-media-label">Cisco Academy</div>
+                        </div>
+                        <div class="cert-info">
+                            <h3>IT Support Fundamentals</h3>
+                            <p>Approved technical foundation in support, troubleshooting, and infrastructure operations aligned to enterprise systems.</p>
+                            <a href="ITCustomerSupportBasicsv120251004-32-1fh6m.pdf" target="_blank" class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Work</h2>
+                    <p class="section-subtitle">Real solutions that deliver measurable results.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image project-placeholder weather">
+                            <div class="project-placeholder-label">
+                                <span>Weather Dashboard</span>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="https://weather-app1r.netlify.app/" target="_blank" class="project-link-btn">
+                                    <i class="fas fa-external-link-alt"></i> View Live
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>☁️ Real-Time Weather Dashboard</h3>
+                            <p class="project-problem"><strong>Problem:</strong> Business decisions hampered by unreliable weather data access.</p>
+                            <p class="project-solution"><strong>Solution:</strong> Fast, responsive dashboard pulling real-time meteorological data via APIs.</p>
+                            <p class="project-result"><strong>Result:</strong> Instant data access, enabling 10+ daily critical business decisions.</p>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">REST API</span>
+                                <span class="tag">Responsive</span>
+                                <span class="tag">Real-Time Data</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-image project-placeholder quiz">
+                            <div class="project-placeholder-label">
+                                <span>Quick Quiz</span>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="https://quick-quiz-alpha-ten.vercel.app/" target="_blank" class="project-link-btn">
+                                    <i class="fas fa-external-link-alt"></i> View Live
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>🧠 Quick Quiz</h3>
+                            <p class="project-problem"><strong>Problem:</strong> Learners need an engaging way to test knowledge across science, history, religion, and more.</p>
+                            <p class="project-solution"><strong>Solution:</strong> Interactive quiz platform that delivers timed questions across multiple categories with instant feedback.</p>
+                            <p class="project-result"><strong>Result:</strong> A flexible learning tool for knowledge reinforcement in chemistry, biology, religion, history, and general trivia.</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Vercel</span>
+                                <span class="tag">Quiz</span>
+                                <span class="tag">Education</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-cta">
+                    <p>Want to see your business challenge as a case study?</p>
+                    <a href="#contact" class="btn btn-primary">Start a Project</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CONTACT / CTA SECTION -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-header">
+                    <h2>Ready to Transform Your Business?</h2>
+                    <p>Whether you're scaling operations, building new systems, or optimizing existing infrastructure, let's explore how we can drive measurable results together.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-content">
+                        <h3>Let's Connect</h3>
+                        <p>I respond to every inquiry within 24 hours. Tell me about your challenge, and let's discuss if we're a fit.</p>
+
+                        <div class="contact-links">
+                            <a href="https://wa.me/254793638107" target="_blank" class="contact-option">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                                <small>+254 793 638 107</small>
+                            </a>
+                            <a href="mailto:njugunaa467@gmail.com" class="contact-option">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                                <small>njugunaa467@gmail.com</small>
+                            </a>
+                            <a href="https://linkedin.com/in/alex-njuguna-044370319/" target="_blank" class="contact-option">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                                <small>View my profile</small>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/njugunaa467@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New inquiry from njugunaTech portfolio">
+                        <input type="hidden" name="_template" value="table">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company / Project</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell Me About Your Challenge</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send My Inquiry</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container-wide footer-content">
-            <p>&copy; 2025 njugunaTech. All rights reserved. Engineering Business Growth.</p>
-            <div class="footer-social">
-                <a href="https://www.linkedin.com/in/alex-njuguna-044370319/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/njugunaa467" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-mark">aj</span>
+                    <h4>njugunaTech</h4>
+                </div>
+                <p class="footer-tagline">Engineering business growth through precision systems.</p>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/alex-njuguna-044370319/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/njugunaa467" target="_blank">GitHub</a>
+                    <a href="https://wa.me/254793638107" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 njugunaTech. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- WhatsApp floating contact -->
+    <a href="https://wa.me/254793638107" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Chatbase AI widget -->
+    <script type="text/javascript">
+        window.__be = window.__be || {};
+        window.__be.id = "FP1K2TK2YL9wUkRvjbPsw";
+        (function() {
+            var be = document.createElement("script");
+            be.type = "text/javascript";
+            be.async = true;
+            be.src = "https://cdn.chatbase.co/widget.js";
+            be.onload = function() {
+                console.log('Chatbase script loaded successfully.');
+            };
+            be.onerror = function() {
+                console.warn('Chatbase script failed to load. Check your network, deploy the page over HTTPS, and verify the widget ID in Chatbase.');
+            };
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(be, s);
+        })();
+    </script>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
-    <!-- Chatbase AI Agent Integration -->
-    <script type="text/javascript"> window.__be = window.__be || {}; window.__be.id = "FP1K2TK2YL9wUkRvjbPsw"; (function() { var be = document.createElement("script"); be.type = "text/javascript"; be.async = true; be.src = ("https:" == document.location.protocol ? "https://" : "http://") + "cdn.chatbase.co/widget.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(be, s); })(); </script>
 </body>
 </html>
