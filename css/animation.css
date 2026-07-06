@@ -1,0 +1,463 @@
+/* ===========================
+   GLOBAL TRANSITIONS
+=========================== */
+
+*{
+
+    transition:
+        color .3s ease,
+        background-color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+/* ===========================
+   REVEAL ANIMATION
+=========================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+
+        opacity .8s ease,
+
+        transform .8s cubic-bezier(.2,.65,.25,1);
+
+    will-change:transform,opacity;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===========================
+   STAGGER DELAYS
+=========================== */
+
+.delay-1{
+
+    transition-delay:.1s;
+
+}
+
+.delay-2{
+
+    transition-delay:.2s;
+
+}
+
+.delay-3{
+
+    transition-delay:.3s;
+
+}
+
+.delay-4{
+
+    transition-delay:.4s;
+
+}
+
+.delay-5{
+
+    transition-delay:.5s;
+
+}
+
+/* ===========================
+   HERO CONTENT
+=========================== */
+
+.hero-content>*{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+    animation:heroFade .8s forwards;
+
+}
+
+.hero-content>*:nth-child(1){
+
+    animation-delay:.1s;
+
+}
+
+.hero-content>*:nth-child(2){
+
+    animation-delay:.25s;
+
+}
+
+.hero-content>*:nth-child(3){
+
+    animation-delay:.45s;
+
+}
+
+.hero-content>*:nth-child(4){
+
+    animation-delay:.65s;
+
+}
+
+.hero-content>*:nth-child(5){
+
+    animation-delay:.85s;
+
+}
+
+.hero-content>*:nth-child(6){
+
+    animation-delay:1.05s;
+
+}
+
+@keyframes heroFade{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn-primary,
+
+.btn-secondary{
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease,
+
+        background .35s ease;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        0 18px 45px rgba(37,99,235,.35);
+
+}
+
+.btn-secondary:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+.nav-links a,
+
+.hero-socials a,
+
+.contact-link{
+
+    transition:
+
+        transform .3s ease,
+
+        color .3s ease;
+
+}
+
+.hero-socials a:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.nav-links a:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.credibility-card,
+
+.skill-card,
+
+.project-card,
+
+.experience-card,
+
+.highlight,
+
+.contact-card{
+
+    transition:
+
+        transform .35s ease,
+
+        border-color .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+.credibility-card:hover,
+
+.skill-card:hover,
+
+.project-card:hover,
+
+.experience-card:hover,
+
+.highlight:hover,
+
+.contact-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* ===========================
+   PROJECT IMAGES
+=========================== */
+
+.project-image{
+
+    overflow:hidden;
+
+}
+
+.project-image img{
+
+    transition:
+
+        transform .8s ease;
+
+}
+
+.project-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+.form-group input,
+
+.form-group textarea{
+
+    transition:
+
+        border-color .3s ease,
+
+        box-shadow .3s ease;
+
+}
+
+.form-group input:focus,
+
+.form-group textarea:focus{
+
+    box-shadow:
+
+        0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/* ===========================
+   SECTION TITLES
+=========================== */
+
+.section-header h2{
+
+    transition:transform .4s ease;
+
+}
+
+.section-header:hover h2{
+
+    transform:translateX(6px);
+
+}
+
+/* ===========================
+   FLOATING HERO BACKGROUND
+=========================== */
+
+.hero::before{
+
+    animation:
+
+        heroZoom 18s ease-in-out infinite alternate;
+
+}
+
+@keyframes heroZoom{
+
+    from{
+
+        transform:
+
+            scaleX(-1)
+
+            scale(1);
+
+    }
+
+    to{
+
+        transform:
+
+            scaleX(-1)
+
+            scale(1.03);
+
+    }
+
+}
+
+/* ===========================
+   FLOATING STATUS
+=========================== */
+
+.hero-status{
+
+    animation:
+
+        pulseGlow 3s infinite;
+
+}
+
+@keyframes pulseGlow{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(16,185,129,0);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 18px rgba(16,185,129,.25);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 rgba(16,185,129,0);
+
+    }
+
+}
+
+/* ===========================
+   NUMBER COUNTERS
+=========================== */
+
+.number{
+
+    transition:
+
+        transform .35s ease;
+
+}
+
+.highlight:hover .number{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+   CONTACT LINKS
+=========================== */
+
+.contact-link i{
+
+    transition:
+
+        transform .35s ease;
+
+}
+
+.contact-link:hover i{
+
+    transform:scale(1.2);
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0d0d0d;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#3b82f6;
+
+}
+
+/* ===========================
+   REDUCED MOTION
+=========================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}

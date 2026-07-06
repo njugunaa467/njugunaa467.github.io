@@ -1,0 +1,413 @@
+/* ===========================
+   LARGE LAPTOPS
+=========================== */
+
+@media (max-width:1200px){
+
+    .container{
+
+        width:min(1000px,92%);
+
+    }
+
+}
+
+/* ===========================
+   TABLETS
+=========================== */
+
+@media (max-width:992px){
+
+    /* HERO */
+
+    .hero{
+
+        display:flex;
+
+        align-items:center;
+
+        min-height:auto;
+
+        padding:140px 0 90px;
+
+    }
+
+    .hero h1{
+
+        font-size:clamp(3rem,8vw,4.8rem);
+
+    }
+
+    .hero h2{
+
+        font-size:1.15rem;
+
+    }
+
+    .hero-description{
+
+        font-size:1rem;
+
+    }
+
+    /* ABOUT */
+
+    .about-grid{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+
+    /* CONTACT */
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+
+    /* EXPERIENCE */
+
+    .experience-timeline{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .experience-card{
+
+        padding:16px;
+
+    }
+
+    .experience-date{
+
+        margin-bottom:10px;
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    /* Navigation */
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+    .nav-burger{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:6px;
+
+    }
+
+    .nav-burger span{
+
+        width:26px;
+
+        height:3px;
+
+        background:#fff;
+
+        border-radius:10px;
+
+        transition:.35s;
+
+    }
+
+    /* Hero */
+
+    .hero{
+
+        text-align:center;
+
+    }
+
+    .hero-content{
+
+        margin:auto;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+    .hero-socials{
+
+        justify-content:center;
+
+    }
+
+    /* Credibility */
+
+    .credibility{
+
+        padding:70px 0;
+
+    }
+
+    .credibility-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    /* About */
+
+    .about{
+
+        padding:90px 0;
+
+    }
+
+    .section-header{
+
+        text-align:center;
+
+    }
+
+    .section-header h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .about-highlights{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    /* Skills */
+
+    .skills{
+
+        padding:90px 0;
+
+    }
+
+    .skills-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    /* Projects */
+
+    .projects{
+
+        padding:90px 0;
+
+    }
+
+    .projects-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .project-links{
+
+        flex-direction:column;
+
+    }
+
+    .project-links a{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    /* Experience */
+
+    .experience{
+
+        padding:80px 0;
+
+    }
+
+    .experience-card{
+
+        padding:14px;
+
+    }
+
+    /* Contact */
+
+    .contact{
+
+        padding:90px 0;
+
+    }
+
+    .contact-form{
+
+        padding:30px;
+
+    }
+
+}
+
+/* ===========================
+   SMALL PHONES
+=========================== */
+
+@media (max-width:576px){
+
+    .container{
+
+        width:92%;
+
+    }
+
+    .hero{
+
+        padding-top:120px;
+
+    }
+
+    .hero h1{
+
+        font-size:2.7rem;
+
+        letter-spacing:-2px;
+
+    }
+
+    .hero h2{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:8px;
+
+        line-height:1.6;
+
+    }
+
+    .hero h2 span{
+
+        display:none;
+
+    }
+
+    .hero-description{
+
+        font-size:.95rem;
+
+    }
+
+    .hero-status{
+
+        font-size:.75rem;
+
+        padding:8px 15px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .hero-buttons a{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .section-header h2{
+
+        font-size:1.9rem;
+
+    }
+
+    .about-highlights{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .number{
+
+        font-size:2.5rem;
+
+    }
+
+    .experience-content h3{
+
+        font-size:1.35rem;
+
+    }
+
+    .contact-card{
+
+        padding:25px;
+
+    }
+
+    .contact-form{
+
+        padding:25px;
+
+    }
+
+    .contact-link{
+
+        padding:18px;
+
+    }
+
+}
+
+/* ===========================
+   VERY SMALL DEVICES
+=========================== */
+
+@media (max-width:380px){
+
+    .hero h1{
+
+        font-size:2.3rem;
+
+    }
+
+    .section-header h2{
+
+        font-size:1.6rem;
+
+    }
+
+    .btn-primary,
+
+    .btn-secondary{
+
+        font-size:.9rem;
+
+    }
+
+}

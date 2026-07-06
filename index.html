@@ -1,852 +1,1163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Njuguna · Frontend Developer · React & TypeScript</title>
-  <meta name="description" content="Alex Njuguna — Frontend Developer in Nairobi. Founder of FlowOps Systems. I ship React and TypeScript interfaces for production apps. Open to frontend and full-stack roles.">
-  <meta name="keywords" content="Frontend Developer, React Developer, TypeScript, Next.js, Software Engineer, Nairobi Kenya, FlowOps">
-  <meta name="author" content="Alex Njuguna">
-  <meta name="theme-color" content="#0A0A0A">
-  <meta property="og:title" content="Alex Njuguna · Frontend Developer">
-  <meta property="og:description" content="Founder of FlowOps Systems. React, TypeScript, and production UI work from Nairobi.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/Image.jpeg">
-  <link rel="icon" href="assets/favicon.webp" type="image/webp">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Alex Njuguna",
-    "jobTitle": "Frontend Developer",
-    "url": "https://njugunaa467.github.io",
-    "sameAs": [
-      "https://github.com/njugunaa467",
-      "https://linkedin.com/in/alex-njuguna-044370319/"
-    ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "FlowOps Systems"
-    },
-    "knowsAbout": ["React", "TypeScript", "Next.js", "Frontend Development"]
-  }
-  </script>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+    <meta name="theme-color" content="#2563EB">
+
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://njugunaa467.github.io/">
+
+    <meta name="author" content="Alex Njuguna">
+
+    <title>Alex Njuguna | Frontend Developer & UX/UI Designer</title>
+
+    <meta name="description" content="Frontend Developer, UX/UI Designer and AI Builder creating fast, modern digital experiences.">
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
 </head>
+
 <body>
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
-  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0l4-4m-4 4l-4-4M4 21h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-external" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-envelope" viewBox="0 0 24 24"><path d="M4 6h16v12H4V6zm0 0l8 7 8-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.71.115 2.51.337 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48A10 10 0 0012 2z" fill="currentColor"/></symbol>
-  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M6 9H2v12h4V9zM4 6.5A2 2 0 114 2a2 2 0 010 4.5zM22 21h-4v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.37 1.61-2.37 3.27V21h-4V9h3.84v1.77h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.15V21z" fill="currentColor"/></symbol>
-  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.7 14.9L2 22l5.3-1.3A10 10 0 1012 2zm5.2 14.2c-.22.62-1.28 1.18-1.78 1.26-.48.08-1.1.11-1.78-.11-.4-.14-.93-.33-1.6-.65-2.82-1.37-4.66-4.57-4.8-4.78-.14-.22-1.14-1.52-1.14-2.95 0-1.43.75-2.13 1.02-2.42.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18 0 .41-.07.64.49.22.55.76 1.86.83 1.99.07.13.12.28.02.45-.1.17-.15.28-.3.43-.15.15-.31.33-.44.45-.15.15-.3.31-.13.61.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.64-.08.17-.21.74-.86.94-1.16.19-.29.38-.24.64-.15.26.1 1.65.78 1.93.92.29.15.48.22.55.34.07.12.07.71-.15 1.33z" fill="currentColor"/></symbol>
-  <symbol id="i-react" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.2" transform="rotate(120 12 12)"/></symbol>
-  <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="18" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="7" r="1" fill="currentColor"/><circle cx="7" cy="17" r="1" fill="currentColor"/></symbol>
-  <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.5 5.5 0 01-5.4 4.36H12a3 3 0 01-3-3c0-1.66 1.34-3 3-3h1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-  <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M12 15l-3 6 3-1 3 1-3-6zm0 0c3.87-2.2 6-6.13 6-11a20 20 0 00-6 2 20 20 0 00-6-2c0 4.87 2.13 8.8 6 11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
-  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18h11a4 4 0 000-8 5 5 0 00-9.9-1A3.5 3.5 0 007 18z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
-  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 8L4 12l4 4M16 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-brain" viewBox="0 0 24 24"><path d="M8 5a3 3 0 00-3 3v1a2 2 0 000 4v1a3 3 0 003 3M16 5a3 3 0 013 3v1a2 2 0 010 4v1a3 3 0 01-3 3M9 8h6M9 16h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-  <symbol id="i-network" viewBox="0 0 24 24"><rect x="2" y="14" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="16" y="14" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="9" y="4" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 10v4M5 14l7-4m7 4l-7-4" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
-</svg>
+<!-- Skip Link -->
+<a href="#main" class="skip-link">Skip to content</a>
 
-<a href="#main" class="skip-link">Skip to main content</a>
+<!-- Navigation -->
+<header class="nav">
+    <div class="wrap nav-inner">
 
-<nav class="nav" aria-label="Main navigation">
-  <div class="wrap">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo" aria-label="Alex Njuguna — Home">
-        <span class="logo-mark" aria-hidden="true">AN</span>
-        <span>Alex Njuguna</span>
-      </a>
-      <div class="nav-links" role="menubar">
-        <a href="#about"      class="nav-link" role="menuitem">About</a>
-        <a href="#building"   class="nav-link" role="menuitem">Building</a>
-        <a href="#projects"   class="nav-link" role="menuitem">Work</a>
-        <a href="#github"     class="nav-link" role="menuitem">GitHub</a>
-        <a href="#experience" class="nav-link" role="menuitem">Experience</a>
-        <a href="#contact"    class="nav-cta"  role="menuitem">Hire Me</a>
-      </div>
-      <button class="nav-burger" id="burgerBtn" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+        <!-- Welcome message -->
+        <div class="nav-logo nav-welcome">
+            <span class="nav-greeting">Welcome</span>
+            <span class="nav-subtitle">Entrepreneur • Tech Leader</span>
+            <strong>Alex Njuguna</strong>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#contact" class="nav-link">Contact</a>
+
+            <a href="assets/documents/Alex-Njuguna-CV.pdf"
+               target="_blank"
+               class="nav-cta">
+                Download CV
+            </a>
+        </nav>
+
+        <!-- Mobile Button -->
+        <button
+            class="nav-burger"
+            id="burgerBtn"
+            aria-label="Open Menu"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
     </div>
-  </div>
-  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-    <a href="#about">About</a>
-    <a href="#building">Building</a>
-    <a href="#projects">Work</a>
-    <a href="#github">GitHub</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Hire Me</a>
-  </div>
-</nav>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-nav" id="mobileNav">
+
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+
+        <a href="assets/documents/" target="_blank">
+            Download CV
+        </a>
+
+    </nav>
+</header>
 
 <main id="main">
 
-<!-- HERO -->
-<section id="hero" class="hero">
-  <div class="hero-grid-bg" aria-hidden="true"></div>
-  <div class="wrap">
-    <div class="hero-grid">
+    <!-- HERO -->
+     <section class="hero" id="home">
 
-      <div class="hero-content">
-        <div class="eyebrow">
-          <span class="eyebrow-dot" aria-hidden="true"></span>
-          Open to frontend & full-stack roles · Nairobi
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="hero-status">
+                ● Available for Opportunities
+            </span>
+
+            <h1>
+                Alex Njuguna
+            </h1>
+
+            <h2>
+                Frontend Developer
+                <span>•</span>
+                UX/UI Designer
+                <span>•</span>
+                Founder
+            </h2>
+
+            <p class="hero-description">
+                I build premium web experiences that combine beautiful design,
+                clean code and exceptional user experience. My focus is creating
+                products people genuinely enjoy using.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="assets/documents/Alex-Njuguna-CV.pdf"
+                   class="btn-primary"
+                   target="_blank">
+
+                    View Resume
+
+                </a>
+
+                <a href="#contact"
+                   class="btn-secondary">
+
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                    Let's Talk
+
+                </a>
+
+            </div>
+
+            <div class="hero-socials">
+
+                <a href="https://www.linkedin.com/in/alex-njuguna-044370319/"
+                   target="_blank">
+
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    LinkedIn
+
+                </a>
+
+                <a href="https://github.com/njugunaa467"
+                   target="_blank">
+
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    GitHub
+
+                </a>
+
+                <a href="mailto:alexnjuguna602@gmail.com">
+
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    Email
+
+                </a>
+
+            </div> <!-- .hero-socials -->
+
+        </div> <!-- .hero-content -->
+
+    </div> <!-- .container -->
+
+</section> <!-- .hero -->
+
+<!-- ===========================
+     SKILLS
+=========================== -->
+
+<section id="skills" class="skills">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                TECHNICAL EXPERTISE
+            </span>
+
+            <h2>
+                Technologies I use to build modern digital products.
+            </h2>
+
+            <p class="section-description">
+
+                My stack focuses on building fast, scalable and user-centered
+                applications from concept to deployment.
+
+            </p>
+
         </div>
-        <h1 class="hero-headline">
-          I build React<br>
-          interfaces for<br>
-          <em>real products.</em>
-        </h1>
-        <p class="hero-sub">
-          Frontend developer and founder of <strong>FlowOps Systems</strong>. I take features from Figma to deployed code — component libraries, API integrations, and the details that make UIs feel finished.
+
+        <div class="skills-grid">
+
+            <!-- Frontend -->
+
+            <div class="skill-card">
+
+                <div class="skill-title">
+
+                    <h3><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Frontend Development</h3>
+
+                    <span>Core</span>
+
+                </div>
+
+                <p>
+
+                    Building responsive, accessible and high-performance
+                    interfaces with clean architecture and modern web standards.
+
+                </p>
+
+                <div class="skill-tags">
+
+                    <span><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5</span>
+                    <span><i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS3</span>
+                    <span><i class="fa-brands fa-react" aria-hidden="true"></i> React</span>
+                    <span><i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript</span>
+                    <span><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> Responsive Design</span>
+                    <span><i class="fa-solid fa-universal-access" aria-hidden="true"></i> Accessibility</span>
+                    <span><i class="fa-solid fa-gauge-high" aria-hidden="true"></i> Performance</span>
+
+                </div>
+
+            </div>
+
+            <!-- Backend -->
+
+            <div class="skill-card">
+
+                <div class="skill-title">
+
+                    <h3><i class="fa-solid fa-server" aria-hidden="true"></i> Backend Development</h3>
+
+                    <span>Server</span>
+
+                </div>
+
+                <p>
+
+                    Creating secure backend systems, REST APIs and database
+                    driven applications with scalable architecture.
+
+                </p>
+
+                <div class="skill-tags">
+
+                    <span><i class="fa-brands fa-python" aria-hidden="true"></i> Python</span>
+                    <span><i class="fa-brands fa-node-js" aria-hidden="true"></i> Node.js</span>
+                    <span><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Express</span>
+                    <span><i class="fa-solid fa-database" aria-hidden="true"></i> MySQL</span>
+                    <span><i class="fa-solid fa-code-branch" aria-hidden="true"></i> REST APIs</span>
+                    <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Authentication</span>
+
+                </div>
+
+            </div>
+
+            <!-- UI UX -->
+
+            <div class="skill-card">
+
+                <div class="skill-title">
+
+                    <h3><i class="fa-solid fa-pencil-ruler" aria-hidden="true"></i> UI / UX Design</h3>
+
+                    <span>Design</span>
+
+                </div>
+
+                <p>
+
+                    Designing intuitive user experiences with modern interfaces,
+                    strong hierarchy and user-focused design systems.
+
+                </p>
+
+                <div class="skill-tags">
+
+                    <span><i class="fa-brands fa-figma" aria-hidden="true"></i> Figma</span>
+                    <span><i class="fa-solid fa-vector-square" aria-hidden="true"></i> Wireframing</span>
+                    <span><i class="fa-solid fa-flask" aria-hidden="true"></i> Prototyping</span>
+                    <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Design Systems</span>
+                    <span><i class="fa-solid fa-flow-chart" aria-hidden="true"></i> User Flows</span>
+                    <span><i class="fa-solid fa-display" aria-hidden="true"></i> Responsive UI</span>
+
+                </div>
+
+            </div>
+
+            <!-- Graphic Design -->
+
+            <div class="skill-card">
+
+                <div class="skill-title">
+
+                    <h3><i class="fa-solid fa-palette" aria-hidden="true"></i> Graphic Design</h3>
+
+                    <span>Creative</span>
+
+                </div>
+
+                <p>
+
+                    Crafting polished visual identities, digital layouts and brand
+                    systems that elevate product storytelling and professional design.
+
+                </p>
+
+                <div class="skill-tags">
+
+                    <span><i class="fa-brands fa-figma" aria-hidden="true"></i> Figma</span>
+                    <span><i class="fa-brands fa-adobe" aria-hidden="true"></i> Adobe Illustrator</span>
+                    <span><i class="fa-brands fa-adobe" aria-hidden="true"></i> Adobe Photoshop</span>
+                    <span><i class="fa-brands fa-canva" aria-hidden="true"></i> Canva</span>
+                    <span><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Branding</span>
+                    <span><i class="fa-solid fa-play" aria-hidden="true"></i> Motion Design</span>
+
+                </div>
+
+            </div>
+
+            <!-- AI -->
+
+            <div class="skill-card">
+
+                <div class="skill-title">
+
+                    <h3><i class="fa-solid fa-robot" aria-hidden="true"></i> AI & Automation</h3>
+
+                    <span>Future</span>
+
+                </div>
+
+                <p>
+
+                    Leveraging modern AI tools and workflow automation to
+                    increase productivity and improve software development.
+
+                </p>
+
+                <div class="skill-tags">
+
+                    <span><i class="fa-solid fa-keyboard" aria-hidden="true"></i> Prompt Engineering</span>
+                    <span><i class="fa-solid fa-brain" aria-hidden="true"></i> OpenAI</span>
+                    <span><i class="fa-solid fa-robot" aria-hidden="true"></i> Automation</span>
+                    <span><i class="fa-solid fa-gears" aria-hidden="true"></i> AI Workflows</span>
+                    <span><i class="fa-solid fa-cogs" aria-hidden="true"></i> n8n</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="about" class="about">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">ABOUT ME</span>
+
+            <h2>Building digital products with purpose.</h2>
+
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p class="about-intro">
+
+                    I'm <strong>Alex Njuguna</strong>, a Full Stack Developer passionate about building software that is fast, intuitive and solves real-world problems.
+
+                </p>
+
+                <p>
+
+                    My expertise spans frontend engineering, backend development, UI/UX design and AI-powered solutions. I enjoy transforming ideas into scalable products that deliver measurable value.
+
+                </p>
+
+                <p>
+
+                    Beyond writing code, I think like a product builder—understanding business goals, improving user experience and delivering solutions that make an impact.
+
+                </p>
+
+            </div>
+
+            <div class="about-highlights">
+
+                <div class="highlight">
+                    <span class="number">15+</span>
+                    <span class="label">Projects Built</span>
+                </div>
+
+                <div class="highlight">
+                    <span class="number">4+</span>
+                    <span class="label">Years Learning & Building</span>
+                </div>
+
+                <div class="highlight">
+                    <span class="number">5+</span>
+                    <span class="label">Technical Certifications</span>
+                </div>
+
+                <div class="highlight">
+                    <span class="number">100%</span>
+                    <span class="label">Continuous Learning</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- ===========================
+     PROJECTS
+=========================== -->
+
+<section id="projects" class="projects">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                FEATURED PROJECTS
+            </span>
+
+            <h2>
+                Real products built for real users.
+            </h2>
+
+            <p class="section-description">
+
+                A selection of projects demonstrating my ability to design,
+                develop and deploy modern web applications.
+
+            </p>
+
+        </div>
+
+        <!-- Featured Project -->
+
+        <article class="featured-project">
+
+            <div class="project-content">
+
+                <span class="project-badge">
+                    Featured Project
+                </span>
+
+                <h3>
+
+                    FlowOps Systems
+
+                </h3>
+
+                <p>
+
+                    A business website and SaaS landing platform with an
+                    integrated AI sales assistant. Live site demonstrates
+                    marketing, lead capture and automation workflows.
+
+                </p>
+
+                <div class="project-highlights">
+
+                    <div>
+
+                        <strong>Role</strong>
+
+                        <span>Founder & Full Stack Developer</span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Focus</strong>
+
+                        <span>Business Website & SaaS Platform</span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Status</strong>
+
+                        <span>Live</span>
+
+                    </div>
+
+                </div>
+
+                <div class="project-tech">
+
+                    <span>Next.js (React)</span>
+                    <span>Tailwind CSS</span>
+                    <span>Vercel (Hosting & CDN)</span>
+                    <span>AI Sales Assistant (custom JS)</span>
+                    <span>Responsive Design</span>
+
+                </div>
+
+                <div class="project-buttons">
+
+                    <a href="https://flow-ops-systems.vercel.app/"
+                       target="_blank"
+                       class="btn-primary">
+
+                        Live Demo
+
+                    </a>
+
+                    <a href="https://github.com/FLOWOPS-GROUP"
+                       target="_blank"
+                       class="btn-secondary">
+
+                        GitHub
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="project-image">
+
+                <!-- Screenshot later -->
+
+                <div class="image-placeholder">
+
+                    FlowOps Preview
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- Other Projects -->
+
+        <div class="project-grid">
+
+            <!-- Weather -->
+
+            <article class="project-card">
+
+                <div class="project-preview">
+
+                    Weather Dashboard
+
+                </div>
+
+                <div class="project-body">
+
+                    <h3>
+
+                        Weather Dashboard
+
+                    </h3>
+
+                    <p>
+
+                        Responsive weather application integrating live weather
+                        APIs with dynamic search, location lookup and
+                        real-time forecasts.
+
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>JavaScript</span>
+                        <span>REST API</span>
+                        <span>CSS</span>
+
+                    </div>
+
+                    <div class="project-buttons">
+
+                        <a href="https://weather-app1r.netlify.app/"
+                           target="_blank"
+                           class="project-link">
+
+                            Live Demo
+
+                        </a>
+
+                        <a href="YOUR_GITHUB_LINK"
+                           target="_blank"
+                           class="project-link">
+
+                            GitHub
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- Quiz -->
+
+            <article class="project-card">
+
+                <div class="project-preview">
+
+                    Quick Quiz
+
+                </div>
+
+                <div class="project-body">
+
+                    <h3>
+
+                        Quick Quiz
+
+                    </h3>
+
+                    <p>
+
+                        Interactive quiz application featuring dynamic
+                        questions, score tracking and responsive user
+                        experience.
+
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+
+                    </div>
+
+                    <div class="project-buttons">
+
+                        <a href="https://quick-quiz-alpha-ten.vercel.app/"
+                           target="_blank"
+                           class="project-link">
+
+                            Live Demo
+
+                        </a>
+
+                        <a href="YOUR_GITHUB_LINK"
+                           target="_blank"
+                           class="project-link">
+
+                            GitHub
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- EXPERIENCE -->
+<section id="experience" class="experience">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                EXPERIENCE
+            </span>
+
+            <h2>
+                Building products through real-world experience.
+            </h2>
+
+        </div>
+
+        <div class="experience-timeline">
+
+            <!-- FlowOps -->
+
+            <article class="experience-card">
+
+                <div class="experience-date">
+                    2025 — Present
+                </div>
+
+                <div class="experience-content">
+
+                    <h3>
+                        Founder & Full Stack Developer
+                    </h3>
+
+                    <h4>
+                        FlowOps Systems
+                    </h4>
+
+                    <p>
+
+                        Building business software, websites and automation
+                        solutions for startups and SMEs while leading product
+                        design, frontend architecture, backend development and
+                        deployment.
+
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Designed and developed the FlowOps Systems company website.
+                        </li>
+
+                        <li>
+                            Built responsive frontend interfaces using HTML, CSS and JavaScript.
+                        </li>
+
+                        <li>
+                            Developed backend services using Python and MySQL.
+                        </li>
+
+                        <li>
+                            Designed user interfaces and user experiences from concept to deployment.
+                        </li>
+
+                        <li>
+                            Managed GitHub repositories, deployment and version control.
+                        </li>
+
+                    </ul>
+
+                    <div class="experience-tags">
+
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                        <span>MySQL</span>
+                        <span>UI/UX</span>
+                        <span>Git</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+<!-- MemeyAI -->
+
+<article class="experience-card">
+
+    <div class="experience-date">
+        2025
+    </div>
+
+    <div class="experience-content">
+
+        <h3>
+            Frontend Developer Intern
+        </h3>
+
+        <h4>
+            MemeyAI
+        </h4>
+
+        <p>
+
+            Collaborated with the development team to build responsive web
+            interfaces, improve user experience and transform UI concepts into
+            production-ready frontend components.
+
         </p>
 
-        <div class="trust-bar" aria-label="Quick facts">
-          <div class="trust-item">
-            <span class="trust-val">3+ yrs</span>
-            <span class="trust-label">Shipping code</span>
-          </div>
-          <div class="trust-divider" aria-hidden="true"></div>
-          <div class="trust-item">
-            <span class="trust-val">4</span>
-            <span class="trust-label">Live deployments</span>
-          </div>
-          <div class="trust-divider" aria-hidden="true"></div>
-          <div class="trust-item">
-            <span class="trust-val">Founder</span>
-            <span class="trust-label">FlowOps Systems</span>
-          </div>
-        </div>
+        <ul>
 
-        <div class="hero-stack" aria-label="Core technologies">
-          <span class="stack-tag">React</span>
-          <span class="stack-tag">TypeScript</span>
-          <span class="stack-tag">Next.js</span>
-          <span class="stack-tag">Tailwind CSS</span>
-          <span class="stack-tag">Node.js</span>
-        </div>
-        <div class="hero-actions">
-          <a href="#projects" class="btn-primary">
-            See my work <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-          </a>
-          <a href="assets/CV-ALEX%20NJUGUNA.pdf" target="_blank" rel="noopener" class="btn-ghost">
-            Download CV <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
-          </a>
-        </div>
-        <div class="hero-socials">
-          <a href="https://linkedin.com/in/alex-njuguna-044370319/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
-            <svg class="icon icon-lg" aria-hidden="true"><use href="#i-linkedin"/></svg>
-          </a>
-          <a href="https://github.com/njugunaa467" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
-            <svg class="icon icon-lg" aria-hidden="true"><use href="#i-github"/></svg>
-          </a>
-          <a href="https://wa.me/254793638107" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp">
-            <svg class="icon icon-lg" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-          </a>
-        </div>
-      </div>
+            <li>
+                Developed responsive web pages using HTML, CSS and JavaScript.
+            </li>
 
-      <div class="photo-side">
-        <div class="photo-card glass-card">
-          <picture>
-            <source srcset="assets/image-profile.webp" type="image/webp">
-            <img src="assets/Image.jpeg" alt="Alex Njuguna, Frontend Developer" width="440" height="550" loading="eager" fetchpriority="high" decoding="async">
-          </picture>
-          <div class="status-chip">
-            <span class="status-dot" aria-hidden="true"></span>
-            Open to work
-          </div>
-          <div class="photo-info">
-            <div class="photo-name">Alex Njuguna</div>
-            <div class="photo-role">Frontend Developer · FlowOps Systems</div>
-          </div>
-        </div>
-        <div class="float-card fc-1 glass-card" aria-hidden="true">
-          <div class="fc-val fc-green">FlowOps</div>
-          <div class="fc-label">Building in public</div>
-        </div>
-        <div class="float-card fc-2 glass-card" aria-hidden="true">
-          <div class="fc-val">React</div>
-          <div class="fc-label">Daily driver</div>
-        </div>
-      </div>
+            <li>
+                Converted UI/UX designs into functional, cross-browser compatible interfaces.
+            </li>
 
-    </div>
-  </div>
-</section>
+            <li>
+                Collaborated with senior developers on frontend implementation and debugging.
+            </li>
 
-<div class="divider"></div>
+            <li>
+                Improved website responsiveness, accessibility and overall user experience.
+            </li>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="wrap">
-    <header class="section-head reveal">
-      <span class="section-label">About</span>
-      <h2 class="section-title">Engineering background, product focus.</h2>
-      <p class="section-sub">I care about readable code, accessible markup, and UIs that hold up under real use — not demo-day polish.</p>
-    </header>
-    <div class="bento">
-      <div class="bento-card bento-wide glass-card reveal">
-        <div class="bento-label">Background</div>
-        <h3>From QA discipline to frontend work</h3>
-        <p>At Regal Pharma I worked on data with a 0.1% error tolerance — that habit of checking edge cases still shows up in how I test UI flows and handle API failures. Since 2021 I've moved into frontend development full-time: client sites at MemeyAI Group, freelance builds across East Africa, and my own product at FlowOps Systems.</p>
-        <div class="pill-group">
-          <span class="pill blue">React</span>
-          <span class="pill blue">TypeScript</span>
-          <span class="pill blue">Next.js</span>
-          <span class="pill green">Node.js</span>
-          <span class="pill green">Django</span>
-          <span class="pill">PostgreSQL</span>
-          <span class="pill">Figma</span>
-          <span class="pill">Tailwind</span>
-        </div>
-      </div>
-      <div class="bento-card glass-card reveal">
-        <div class="bento-label">Shipped to production</div>
-        <div class="bento-stat">4</div>
-        <p>Public apps live on Vercel and Netlify — SaaS marketing site, weather dashboard, and quiz app with real users hitting them.</p>
-      </div>
-      <div class="bento-card glass-card reveal">
-        <div class="bento-label">Company</div>
-        <h3>FlowOps Systems</h3>
-        <p>SaaS tools for small businesses in Kenya. I handle design, frontend, deployment, and client feedback loops.</p>
-        <div class="pill-group">
-          <span class="pill green">Founder</span>
-          <span class="pill">SaaS</span>
-          <span class="pill">Nairobi</span>
-        </div>
-      </div>
-      <div class="bento-card glass-card reveal">
-        <div class="bento-label">What teams get</div>
-        <h3>A developer who owns the UI layer</h3>
-        <p>Component structure, responsive layouts, form validation, loading and error states, and handoff docs — the work that keeps features shippable after launch.</p>
-      </div>
-      <div class="bento-card glass-card reveal">
-        <div class="bento-label">Availability</div>
-        <h3>Looking for the right team</h3>
-        <p>Based in Nairobi. Open to remote frontend or full-stack roles, and on-site in Kenya.</p>
-        <div class="pill-group">
-          <span class="pill green">Full-time</span>
-          <span class="pill green">Contract</span>
-          <span class="pill">Remote</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <li>
+                Worked with Git and GitHub for version control and team collaboration.
+            </li>
 
-<div class="divider"></div>
-
-<!-- CURRENTLY BUILDING -->
-<section id="building" class="section section-alt">
-  <div class="wrap">
-    <header class="section-head reveal">
-      <span class="section-label section-label-green">Currently Building</span>
-      <h2 class="section-title">FlowOps ServiceDesk</h2>
-      <p class="section-sub">The next product under FlowOps — a lightweight help desk for SMEs who outgrow WhatsApp and spreadsheets.</p>
-    </header>
-
-    <div class="building-card glass-card reveal">
-      <div class="building-grid">
-        <div class="building-preview">
-          <div class="browser-frame">
-            <div class="browser-bar">
-              <span class="browser-dot"></span>
-              <span class="browser-dot"></span>
-              <span class="browser-dot"></span>
-              <span class="browser-url">flowops.app/servicedesk</span>
-            </div>
-            <div class="browser-screen">
-              <picture>
-                <source srcset="assets/screenshot-servicedesk.webp" type="image/webp">
-                <img src="assets/screenshot-servicedesk.png" alt="FlowOps platform preview — ServiceDesk UI in development" width="960" height="600" loading="lazy" decoding="async">
-              </picture>
-            </div>
-          </div>
-        </div>
-        <div class="building-content">
-          <div class="building-badge"><span class="pulse-dot" aria-hidden="true"></span> In active development</div>
-          <h3>Ticket tracking built for small teams</h3>
-          <p>ServiceDesk is where I'm applying everything from the FlowOps platform — role-based views, ticket queues, status workflows, and a UI that non-technical staff can use on day one.</p>
-          <ul class="building-list">
-            <li>Ticket creation, assignment, and status updates</li>
-            <li>Dashboard for open vs. resolved volume</li>
-            <li>Responsive layout for field teams on mobile</li>
-            <li>Next.js + TypeScript frontend, API-first architecture</li>
-          </ul>
-          <div class="building-progress">
-            <div class="progress-item">
-              <span class="progress-label">UI & components</span>
-              <div class="progress-track"><div class="progress-fill" style="width:75%"></div></div>
-            </div>
-            <div class="progress-item">
-              <span class="progress-label">Core ticket flows</span>
-              <div class="progress-track"><div class="progress-fill" style="width:55%"></div></div>
-            </div>
-            <div class="progress-item">
-              <span class="progress-label">Auth & roles</span>
-              <div class="progress-track"><div class="progress-fill" style="width:40%"></div></div>
-            </div>
-          </div>
-          <a href="https://flow-ops-systems.vercel.app/" target="_blank" rel="noopener" class="btn-primary btn-sm">
-            FlowOps platform <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- SKILLS -->
-<section id="skills" class="section">
-  <div class="wrap">
-    <header class="section-head reveal">
-      <span class="section-label">Stack</span>
-      <h2 class="section-title">Technologies I use in production.</h2>
-      <p class="section-sub">Grouped by what I actually ship — each tag ties to a project or role, not a tutorial checklist.</p>
-    </header>
-    <div class="skills-grid">
-
-      <div class="skill-card glass-card reveal">
-        <div class="skill-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-react"/></svg></div>
-        <h3>Frontend</h3>
-        <p>Component architecture, hooks, client-side routing, and CSS that scales across breakpoints.</p>
-        <div class="skill-proof">
-          <span class="proof-label">Used on</span>
-          <span class="proof-ref">FlowOps · Quick Quiz · MemeyAI client sites</span>
-        </div>
-        <div class="tech-tags">
-          <span class="tech-tag tech-tag-primary">React</span>
-          <span class="tech-tag tech-tag-primary">Next.js 14</span>
-          <span class="tech-tag tech-tag-primary">TypeScript</span>
-          <span class="tech-tag">Tailwind CSS</span>
-          <span class="tech-tag">Framer Motion</span>
-          <span class="tech-tag">Zustand</span>
-          <span class="tech-tag">HTML/CSS</span>
-        </div>
-        <span class="exp-badge">3+ years daily use</span>
-      </div>
-
-      <div class="skill-card glass-card reveal">
-        <div class="skill-icon skill-icon-green"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-server"/></svg></div>
-        <h3>Backend & APIs</h3>
-        <p>REST endpoints, auth flows, and database schemas for features I build end-to-end.</p>
-        <div class="skill-proof">
-          <span class="proof-label">Used on</span>
-          <span class="proof-ref">FlowOps · Weather Dashboard · Django side projects</span>
-        </div>
-        <div class="tech-tags">
-          <span class="tech-tag tech-tag-green">Node.js</span>
-          <span class="tech-tag tech-tag-green">Express</span>
-          <span class="tech-tag">Django</span>
-          <span class="tech-tag">PostgreSQL</span>
-          <span class="tech-tag">REST APIs</span>
-          <span class="tech-tag">JWT</span>
-        </div>
-        <span class="exp-badge exp-badge-green">Full-stack capable</span>
-      </div>
-
-      <div class="skill-card glass-card reveal">
-        <div class="skill-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-palette"/></svg></div>
-        <h3>UI / UX</h3>
-        <p>Wireframes in Figma, design tokens, and translating layouts into responsive code without losing spacing or hierarchy.</p>
-        <div class="skill-proof">
-          <span class="proof-label">Used on</span>
-          <span class="proof-ref">FlowOps · MemeyAI · Freelance client work</span>
-        </div>
-        <div class="tech-tags">
-          <span class="tech-tag">Figma</span>
-          <span class="tech-tag">Design systems</span>
-          <span class="tech-tag">Responsive layout</span>
-          <span class="tech-tag">WCAG basics</span>
-        </div>
-        <span class="exp-badge">QA + design background</span>
-      </div>
-
-      <div class="skill-card glass-card reveal">
-        <div class="skill-icon skill-icon-green"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-rocket"/></svg></div>
-        <h3>Ship & deploy</h3>
-        <p>Git workflow, preview deploys, and environment config so features reach production without surprises.</p>
-        <div class="skill-proof">
-          <span class="proof-label">Used on</span>
-          <span class="proof-ref">All live projects on Vercel & Netlify</span>
-        </div>
-        <div class="tech-tags">
-          <span class="tech-tag tech-tag-green">Git</span>
-          <span class="tech-tag">GitHub</span>
-          <span class="tech-tag">Vercel</span>
-          <span class="tech-tag">Netlify</span>
-          <span class="tech-tag">GitHub Actions</span>
-        </div>
-        <span class="exp-badge exp-badge-green">4 live deployments</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- PROJECTS -->
-<section id="projects" class="section section-alt">
-  <div class="wrap">
-    <header class="section-head reveal">
-      <span class="section-label">Selected Work</span>
-      <h2 class="section-title">Case studies with context.</h2>
-      <p class="section-sub">What I built, why it mattered, and what shipped.</p>
-    </header>
-
-    <!-- Featured: FlowOps -->
-    <article class="case-featured glass-card reveal">
-      <div class="case-featured-grid">
-        <div class="case-preview">
-          <div class="browser-frame browser-frame-lg">
-            <div class="browser-bar">
-              <span class="browser-dot"></span>
-              <span class="browser-dot"></span>
-              <span class="browser-dot"></span>
-              <span class="browser-url">flow-ops-systems.vercel.app</span>
-            </div>
-            <div class="browser-screen">
-              <picture>
-                <source srcset="assets/screenshot-flowops.webp" type="image/webp">
-                <img src="assets/screenshot-flowops.png" alt="Screenshot of FlowOps Systems live website" width="960" height="600" loading="eager" fetchpriority="high" decoding="async">
-              </picture>
-            </div>
-          </div>
-        </div>
-        <div class="case-body">
-          <div class="case-meta">
-            <span class="case-badge case-badge-founder">Founder project</span>
-            <span class="case-year">2024 — Present</span>
-          </div>
-          <h3 class="case-title">FlowOps Systems</h3>
-          <p class="case-lead">SaaS platform and company I founded in Nairobi. I own the product design, frontend codebase, and Vercel deployment.</p>
-
-          <div class="case-metrics">
-            <div class="metric">
-              <span class="metric-val">Live</span>
-              <span class="metric-label">Production on Vercel</span>
-            </div>
-            <div class="metric">
-              <span class="metric-val">Next.js 14</span>
-              <span class="metric-label">App router stack</span>
-            </div>
-            <div class="metric">
-              <span class="metric-val">Full UI</span>
-              <span class="metric-label">Marketing + product shell</span>
-            </div>
-          </div>
-
-          <div class="case-details">
-            <div class="case-block">
-              <h4>Problem</h4>
-              <p>SMEs in Kenya need affordable software for operations — not enterprise pricing or six-month implementations.</p>
-            </div>
-            <div class="case-block">
-              <h4>What I built</h4>
-              <p>Multi-page SaaS site with animated sections, service pages, and a component library built in TypeScript and Tailwind. ServiceDesk is the next module on this foundation.</p>
-            </div>
-            <div class="case-block">
-              <h4>Outcome</h4>
-              <p>Public product used for client conversations and as the base for FlowOps ServiceDesk. Demonstrates my ability to own a product from wireframe to deploy.</p>
-            </div>
-          </div>
-
-          <div class="tech-tags">
-            <span class="tech-tag tech-tag-primary">Next.js</span>
-            <span class="tech-tag tech-tag-primary">TypeScript</span>
-            <span class="tech-tag">Tailwind CSS</span>
-            <span class="tech-tag">Framer Motion</span>
-            <span class="tech-tag tech-tag-green">Vercel</span>
-          </div>
-          <div class="case-actions">
-            <a href="https://flow-ops-systems.vercel.app/" target="_blank" rel="noopener" class="btn-primary btn-sm">
-              Live site <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
-            </a>
-            <a href="https://github.com/njugunaa467" target="_blank" rel="noopener" class="btn-ghost btn-sm">
-              <svg class="icon icon-lg" aria-hidden="true"><use href="#i-github"/></svg> Source
-            </a>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Secondary projects -->
-    <div class="case-grid">
-
-      <article class="case-card glass-card reveal">
-        <div class="browser-frame">
-          <div class="browser-bar">
-            <span class="browser-dot"></span>
-            <span class="browser-dot"></span>
-            <span class="browser-dot"></span>
-            <span class="browser-url">weather-app1r.netlify.app</span>
-          </div>
-          <div class="browser-screen">
-            <picture>
-              <source srcset="assets/screenshot-weather.webp" type="image/webp">
-              <img src="assets/screenshot-weather.png" alt="Screenshot of Weather Dashboard app" width="960" height="600" loading="lazy" decoding="async">
-            </picture>
-          </div>
-        </div>
-        <div class="case-card-body">
-          <span class="case-type">API Integration</span>
-          <h3>Weather Dashboard</h3>
-          <p>Fetches live data from OpenWeather. Handles loading states, API errors, and layout from mobile to desktop.</p>
-          <div class="case-metrics case-metrics-inline">
-            <div class="metric metric-sm">
-              <span class="metric-val">REST</span>
-              <span class="metric-label">OpenWeather API</span>
-            </div>
-            <div class="metric metric-sm">
-              <span class="metric-val">Netlify</span>
-              <span class="metric-label">Deployed</span>
-            </div>
-          </div>
-          <div class="tech-tags">
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Fetch API</span>
-            <span class="tech-tag">CSS Grid</span>
-          </div>
-          <a href="https://weather-app1r.netlify.app/" target="_blank" rel="noopener" class="case-link">
-            View live <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <article class="case-card glass-card reveal">
-        <div class="browser-frame">
-          <div class="browser-bar">
-            <span class="browser-dot"></span>
-            <span class="browser-dot"></span>
-            <span class="browser-dot"></span>
-            <span class="browser-url">quick-quiz-alpha-ten.vercel.app</span>
-          </div>
-          <div class="browser-screen">
-            <picture>
-              <source srcset="assets/screenshot-quiz.webp" type="image/webp">
-              <img src="assets/screenshot-quiz.png" alt="Screenshot of Quick Quiz React app" width="960" height="600" loading="lazy" decoding="async">
-            </picture>
-          </div>
-        </div>
-        <div class="case-card-body">
-          <span class="case-type">React App</span>
-          <h3>Quick Quiz</h3>
-          <p>Multi-category quiz with timers and score tracking. Built to practice component composition and controlled state.</p>
-          <div class="case-metrics case-metrics-inline">
-            <div class="metric metric-sm">
-              <span class="metric-val">React</span>
-              <span class="metric-label">Hooks-based</span>
-            </div>
-            <div class="metric metric-sm">
-              <span class="metric-val">Vercel</span>
-              <span class="metric-label">Deployed</span>
-            </div>
-          </div>
-          <div class="tech-tags">
-            <span class="tech-tag tech-tag-primary">React</span>
-            <span class="tech-tag">useState</span>
-            <span class="tech-tag">Custom hooks</span>
-          </div>
-          <a href="https://quick-quiz-alpha-ten.vercel.app/" target="_blank" rel="noopener" class="case-link">
-            View live <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-          </a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- GITHUB -->
-<section id="github" class="section">
-  <div class="wrap">
-    <header class="section-head reveal">
-      <span class="section-label">Open Source</span>
-      <h2 class="section-title">GitHub activity & repos.</h2>
-      <p class="section-sub">Public work and recent commits — fetched live from my profile.</p>
-    </header>
-
-    <div class="github-panel glass-card reveal">
-      <div class="github-stats" id="githubStats" aria-live="polite">
-        <div class="github-stat">
-          <span class="github-stat-val" id="ghRepos">—</span>
-          <span class="github-stat-label">Public repos</span>
-        </div>
-        <div class="github-stat">
-          <span class="github-stat-val" id="ghFollowers">—</span>
-          <span class="github-stat-label">Followers</span>
-        </div>
-        <div class="github-stat">
-          <span class="github-stat-val" id="ghUpdated">—</span>
-          <span class="github-stat-label">Last push</span>
-        </div>
-        <div class="github-stat">
-          <span class="github-stat-val github-stat-green" id="ghPrimary">TypeScript</span>
-          <span class="github-stat-label">Primary language</span>
-        </div>
-      </div>
-
-      <div class="github-activity" aria-label="Recent repository activity">
-        <div class="activity-header">
-          <span class="activity-title">Recent activity</span>
-          <span class="activity-sub" id="ghActivitySub">Loading…</span>
-        </div>
-        <div class="activity-bars" id="activityBars" role="img" aria-label="Repository update frequency chart"></div>
-      </div>
-
-      <div class="github-repos" id="githubRepos">
-        <p class="github-loading">Loading repositories…</p>
-      </div>
-
-      <div class="github-achievements">
-        <h3 class="github-ach-title">Technical highlights</h3>
-        <ul class="github-ach-list">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Multiple production apps deployed via GitHub → Vercel/Netlify</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> TypeScript and React across personal and client projects</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> GCP Security training (Pawa IT Solutions, 2026)</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> PLP Academy software development certification</li>
         </ul>
-      </div>
 
-      <a href="https://github.com/njugunaa467" target="_blank" rel="noopener" class="btn-ghost github-cta">
-        <svg class="icon icon-lg" aria-hidden="true"><use href="#i-github"/></svg> github.com/njugunaa467
-      </a>
+        <div class="experience-tags">
+
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Responsive Design</span>
+            <span>Git</span>
+            <span>GitHub</span>
+
+        </div>
+
     </div>
-  </div>
-</section>
 
-<div class="divider"></div>
+</article>
+            <!-- Freelance -->
 
-<!-- EXPERIENCE -->
-<section id="experience" class="section section-alt">
-  <div class="wrap">
-    <header class="section-head reveal">
-      <span class="section-label">Experience</span>
-      <h2 class="section-title">Where I've worked.</h2>
-    </header>
+            <article class="experience-card">
 
-    <div class="exp-layout">
-      <div class="timeline">
+                <div class="experience-date">
+                    2024 — Present
+                </div>
 
-        <div class="timeline-item reveal">
-          <div class="tl-date">2024 — Present</div>
-          <div class="tl-card glass-card">
-            <div class="tl-title">Founder & Lead Engineer</div>
-            <div class="tl-org">FlowOps Systems · Nairobi, Kenya</div>
-            <ul class="tl-bullets">
-              <li>Built and deployed the FlowOps platform on Next.js 14, TypeScript, and Tailwind CSS.</li>
-              <li>Designed product UI in Figma and implemented it through to Vercel production.</li>
-              <li>Scoping features with SME clients and iterating based on their feedback.</li>
-              <li>Now developing FlowOps ServiceDesk as the next product module.</li>
-            </ul>
-          </div>
+                <div class="experience-content">
+
+                    <h3>
+                        Freelance Web Developer
+                    </h3>
+
+                    <h4>
+                        Remote
+                    </h4>
+
+                    <p>
+
+                        Designing and developing modern websites, landing pages
+                        and business solutions for clients while focusing on
+                        responsive design, performance and accessibility.
+
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Developed responsive business websites from scratch.
+                        </li>
+
+                        <li>
+                            Converted UI designs into production-ready code.
+                        </li>
+
+                        <li>
+                            Improved website performance and SEO fundamentals.
+                        </li>
+
+                        <li>
+                            Collaborated with clients from planning to deployment.
+                        </li>
+
+                    </ul>
+
+                    <div class="experience-tags">
+
+                        <span>Responsive Design</span>
+                        <span>SEO</span>
+                        <span>Accessibility</span>
+                        <span>JavaScript</span>
+                        <span>GitHub</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Personal Projects -->
+
+            <article class="experience-card">
+
+                <div class="experience-date">
+                    2023 — Present
+                </div>
+
+                <div class="experience-content">
+
+                    <h3>
+                        Personal Software Projects
+                    </h3>
+
+                    <h4>
+                        Independent Development
+                    </h4>
+
+                    <p>
+
+                        Continuously building production-quality applications to
+                        strengthen frontend, backend and software engineering
+                        skills.
+
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Built Weather Dashboard using external REST APIs.
+                        </li>
+
+                        <li>
+                            Developed an interactive Quiz Application with JavaScript.
+                        </li>
+
+                        <li>
+                            Designed portfolio websites and business landing pages.
+                        </li>
+
+                        <li>
+                            Practiced clean architecture, reusable components and deployment workflows.
+                        </li>
+
+                    </ul>
+
+                    <div class="experience-tags">
+
+                        <span>REST API</span>
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                        <span>GitHub</span>
+                        <span>Vercel</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
         </div>
 
-        <div class="timeline-item reveal">
-          <div class="tl-date">2023 — 2024</div>
-          <div class="tl-card glass-card">
-            <div class="tl-title">Frontend Developer</div>
-            <div class="tl-org">MemeyAI Group · Nairobi, Kenya</div>
-            <ul class="tl-bullets">
-              <li>QA testing on web releases — UI bugs, broken flows, and cross-browser issues before launch.</li>
-              <li>Built and maintained client-facing sites with responsive layouts.</li>
-              <li>Created UI/UX wireframes and translated requirements into working interfaces.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal">
-          <div class="tl-date">2022 — 2024</div>
-          <div class="tl-card glass-card">
-            <div class="tl-title">Quality Analyst</div>
-            <div class="tl-org">Regal Pharma · Nairobi, Kenya</div>
-            <ul class="tl-bullets">
-              <li>Maintained 0.1% error tolerance on critical pharmaceutical data.</li>
-              <li>Built internal reporting tools with Python and Excel automation.</li>
-              <li>Cut manual verification time by 40% through process documentation.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal">
-          <div class="tl-date">2021 — 2022</div>
-          <div class="tl-card glass-card">
-            <div class="tl-title">Freelance Frontend Developer</div>
-            <div class="tl-org">Independent · Remote</div>
-            <ul class="tl-bullets">
-              <li>Delivered landing pages and business websites for East African clients.</li>
-              <li>Ran basic performance and SEO checks before handoff.</li>
-              <li>First production React projects — learned component patterns on real deadlines.</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="certs-sidebar">
-        <h3 class="certs-title">Certifications</h3>
-        <div class="certs-list">
-
-          <div class="cert-card glass-card reveal">
-            <div class="cert-icon cert-icon-green"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-cloud"/></svg></div>
-            <div class="cert-issuer">Pawa IT Solutions</div>
-            <div class="cert-name">GCP Security & Identity Management</div>
-            <a href="assets/ALEX%20NJUGUNA%20-%20Securing%20the%20Cloud_%20GCP%20Security%20%26%20Identity%20Management%20Training%20-%20Certificate.pdf" target="_blank" rel="noopener" class="cert-link">View certificate ↗</a>
-          </div>
-
-          <div class="cert-card glass-card reveal">
-            <div class="cert-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-code"/></svg></div>
-            <div class="cert-issuer">PLP Academy</div>
-            <div class="cert-name">Software Development & Web Design</div>
-            <a href="assets/PLP%20Academy2.pdf" target="_blank" rel="noopener" class="cert-link">View certificate ↗</a>
-          </div>
-
-          <div class="cert-card glass-card reveal">
-            <div class="cert-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-brain"/></svg></div>
-            <div class="cert-issuer">ICT Authority Kenya</div>
-            <div class="cert-name">Artificial Intelligence</div>
-            <a href="assets/alexnjuguna602gmail-com-5261-5363-20251015-402cd56cb4.pdf" target="_blank" rel="noopener" class="cert-link">View certificate ↗</a>
-          </div>
-
-          <div class="cert-card glass-card reveal">
-            <div class="cert-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-network"/></svg></div>
-            <div class="cert-issuer">Cisco Academy</div>
-            <div class="cert-name">IT Support Fundamentals</div>
-            <a href="assets/ITCustomerSupportBasicsv120251004-32-1fh6m.pdf" target="_blank" rel="noopener" class="cert-link">View certificate ↗</a>
-          </div>
-
-        </div>
-      </div>
     </div>
-  </div>
+
 </section>
-
-<div class="divider"></div>
-
 <!-- CONTACT -->
-<section id="contact" class="section">
-  <div class="wrap">
-    <div class="contact-grid">
+<section id="contact" class="contact">
 
-      <div class="contact-info reveal">
-        <span class="section-label">Contact</span>
-        <h2 class="contact-cta-big">
-          Let's talk about<br>your <em>next hire.</em>
-        </h2>
-        <p>Hiring for frontend, React, or full-stack? Send a message — I reply within 24 hours. CV and live projects linked above.</p>
-        <div class="contact-links">
-          <a href="mailto:njugunaa467@gmail.com" class="contact-link glass-card">
-            <div class="contact-link-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-envelope"/></svg></div>
-            <div class="contact-link-text">
-              <strong>Email</strong>
-              <span>njugunaa467@gmail.com</span>
-            </div>
-            <svg class="icon contact-link-arrow" aria-hidden="true"><use href="#i-chevron"/></svg>
-          </a>
-          <a href="https://linkedin.com/in/alex-njuguna-044370319/" target="_blank" rel="noopener" class="contact-link glass-card">
-            <div class="contact-link-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-linkedin"/></svg></div>
-            <div class="contact-link-text">
-              <strong>LinkedIn</strong>
-              <span>Profile & recommendations</span>
-            </div>
-            <svg class="icon contact-link-arrow" aria-hidden="true"><use href="#i-chevron"/></svg>
-          </a>
-          <a href="https://wa.me/254793638107" target="_blank" rel="noopener" class="contact-link contact-link-wa glass-card" aria-label="Chat on WhatsApp">
-            <div class="contact-link-icon wa-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-whatsapp"/></svg></div>
-            <div class="contact-link-text">
-              <strong>WhatsApp</strong>
-              <span>Send a message</span>
-            </div>
-            <svg class="icon contact-link-arrow" aria-hidden="true"><use href="#i-chevron"/></svg>
-          </a>
-          <a href="https://github.com/njugunaa467" target="_blank" rel="noopener" class="contact-link glass-card">
-            <div class="contact-link-icon gh-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-github"/></svg></div>
-            <div class="contact-link-text">
-              <strong>GitHub</strong>
-              <span>Code & commits</span>
-            </div>
-            <svg class="icon contact-link-arrow" aria-hidden="true"><use href="#i-chevron"/></svg>
-          </a>
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                CONTACT
+            </span>
+
+            <h2>
+                Let's build something exceptional.
+            </h2>
+
+            <p class="contact-subtitle">
+
+                Whether you're hiring a frontend developer, full stack developer,
+                UI/UX designer or looking for someone to build your next digital
+                product, I'm ready to help.
+
+            </p>
+
         </div>
-      </div>
 
-      <div class="reveal">
-        <form class="contact-form glass-card" id="contactForm" action="https://formsubmit.co/ajax/njugunaa467@gmail.com" method="POST" novalidate>
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="Portfolio inquiry — Alex Njuguna">
-          <input type="hidden" name="_template" value="table">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fname">First name <span class="req">*</span></label>
-              <input type="text" id="fname" name="first_name" required autocomplete="given-name">
+        <div class="contact-grid">
+
+            <!-- Left -->
+
+            <div class="contact-info">
+
+                <div class="contact-card">
+
+                    <h3>Get in touch</h3>
+
+                    <p>
+
+                        I'm currently open to internships, freelance projects,
+                        contract work and full-time opportunities.
+
+                    </p>
+
+                </div>
+
+                <a href="mailto:alexnjuguna602@gmail.com" class="contact-link">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <div>
+
+                        <span>Email</span>
+
+                        <strong>alexnjuguna602@gmail.com</strong>
+
+                    </div>
+
+                </a>
+
+                <a href="tel:+254793638107" class="contact-link">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <div>
+
+                        <span>Phone</span>
+
+                        <strong>+254 793 638 107</strong>
+
+                    </div>
+
+                </a>
+
+                <a href="https://www.linkedin.com/in/alex-njuguna-044370319/"
+                   target="_blank"
+                   class="contact-link">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                    <div>
+
+                        <span>LinkedIn</span>
+
+                        <strong>Connect with me</strong>
+
+                    </div>
+
+                </a>
+
+                <a href="https://github.com/njugunaa467"
+                   target="_blank"
+                   class="contact-link">
+
+                    <i class="fa-brands fa-github"></i>
+
+                    <div>
+
+                        <span>GitHub</span>
+
+                        <strong>View my repositories</strong>
+
+                    </div>
+
+                </a>
+
             </div>
-            <div class="form-group">
-              <label for="lname">Last name</label>
-              <input type="text" id="lname" name="last_name" autocomplete="family-name">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="femail">Email address <span class="req">*</span></label>
-            <input type="email" id="femail" name="email" required autocomplete="email">
-          </div>
-          <div class="form-group">
-            <label for="company">Company / Role</label>
-            <input type="text" id="company" name="company" autocomplete="organization" placeholder="e.g. Frontend Developer at…">
-          </div>
-          <div class="form-group">
-            <label for="message">Message <span class="req">*</span></label>
-            <textarea id="message" name="message" rows="5" required placeholder="Tell me about the role or team…"></textarea>
-          </div>
-          <button type="submit" class="form-submit" id="submitBtn">Send Message</button>
-          <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
-        </form>
-      </div>
+
+            <!-- Right -->
+
+            <form class="contact-form">
+
+                <div class="form-group">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        placeholder="Your Name"
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Email Address</label>
+
+                    <input
+                        type="email"
+                        placeholder="your@email.com"
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Company</label>
+
+                    <input
+                        type="text"
+                        placeholder="Company Name">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Message</label>
+
+                    <textarea
+                        rows="6"
+                        placeholder="Tell me about your project..."
+                        required></textarea>
+
+                </div>
+
+                <div class="form-message" role="status" aria-live="polite" tabindex="-1"></div>
+
+                <button class="btn-primary">
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+        </div>
 
     </div>
-  </div>
+
 </section>
 
 </main>
 
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="logo-mark" aria-hidden="true">AN</span>
-        <span>Alex Njuguna</span>
-      </div>
-      <p class="footer-copy">© 2026 Alex Njuguna · FlowOps Systems</p>
-      <nav class="footer-links" aria-label="Footer links">
-        <a href="https://linkedin.com/in/alex-njuguna-044370319/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/njugunaa467" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://flow-ops-systems.vercel.app/" target="_blank" rel="noopener">FlowOps</a>
-      </nav>
-    </div>
-  </div>
-</footer>
+    <a href="https://wa.me/254793638107" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp</span>
+    </a>
 
-<a href="https://wa.me/254793638107" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
-  <svg class="icon icon-lg" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-</a>
+    <!-- JS -->
+    <script src="js/navigation.js" defer></script>
+    <script src="js/animation.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/app.js" defer></script>
 
-<script src="script.js" defer></script>
 </body>
+
 </html>

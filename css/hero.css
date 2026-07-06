@@ -1,0 +1,320 @@
+.container{
+
+    width:min(1200px,92%);
+    margin:auto;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+
+}
+
+/* Background */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(180deg, rgba(7,10,16,.12), rgba(8,12,22,.20)),
+        url("../assets/images/hero-bg.webp");
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+    background-position:center 50%;
+
+    transform:scaleX(-1);
+
+    /* subtle slow zoom */
+    animation:heroZoom 18s ease-in-out infinite alternate;
+
+    /* subtle image boost without darkening the face */
+    filter:contrast(1.08) saturate(1.06) brightness(1.08);
+
+    z-index:1;
+
+}
+
+/* Overlay */
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:2;
+
+    /* lighter premium overlay so the photo remains visible */
+    background:linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.07));
+
+}
+
+/* Content */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:3;
+
+    max-width:720px;
+
+    padding:110px 0 60px;
+
+}
+
+/* Status */
+
+.hero-status{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    backdrop-filter:blur(16px);
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:#10B981;
+
+    font-size:.85rem;
+
+    margin-bottom:16px;
+
+}
+
+.hero-welcome{
+
+    font-size:1rem;
+
+    letter-spacing:.22em;
+
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.72);
+
+    margin-bottom:14px;
+
+}
+
+.hero-welcome strong{
+
+    color:#fff;
+
+}
+
+.hero h1{
+
+    font-size:clamp(3.5rem,8vw,6rem);
+
+    line-height:1;
+
+    letter-spacing:-3px;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+
+    color:var(--white);
+
+}
+
+/* Name */
+
+/* Roles */
+
+.hero h2{
+
+    font-size:1.35rem;
+
+    font-weight:500;
+
+    color:#d1d5db;
+
+    margin-bottom:30px;
+
+}
+
+.hero h2 span{
+
+    color:#2563EB;
+
+    margin:0 12px;
+
+}
+
+/* Description */
+
+.hero-description{
+
+    max-width:620px;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+    color:#b4b4b4;
+
+    margin-bottom:40px;
+
+}
+
+/* Buttons */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:30px;
+
+}
+
+.btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px 24px;
+
+    border-radius:18px;
+
+    background:linear-gradient(90deg,#2563EB,#60A5FA);
+
+    border:1px solid rgba(96,165,250,.28);
+
+    color:#fff;
+
+    font-weight:700;
+
+    letter-spacing:.02em;
+
+    box-shadow:0 18px 45px rgba(37,99,235,.22);
+
+}
+
+.btn-secondary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px 24px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.16);
+
+    color:#fff;
+
+    font-weight:700;
+
+}
+
+.btn-primary:hover,
+.btn-secondary:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.btn-primary:hover{
+
+    background:linear-gradient(90deg,#3b82f6,#93c5fd);
+
+}
+
+.btn-secondary:hover{
+
+    background:rgba(255,255,255,.14);
+
+}
+
+/* Socials */
+
+.hero-socials{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-socials a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#fff;
+
+    opacity:.78;
+
+    transition:.3s;
+
+}
+
+.hero-socials a:hover{
+
+    opacity:1;
+
+    color:#2563EB;
+
+}
+
+/* Background Animation */
+
+@keyframes heroZoom{
+
+    from{
+
+        transform:scaleX(-1) scale(1);
+
+    }
+
+    to{
+
+        transform:scaleX(-1) scale(1.03);
+
+    }
+
+}

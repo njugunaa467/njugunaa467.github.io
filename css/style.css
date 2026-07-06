@@ -1,0 +1,539 @@
+:root{
+
+    /* Colors */
+
+    --background:#09090B;
+    --surface:#111111;
+
+    --primary:#2563EB;
+    --secondary:#10B981;
+    --blue:#60a5fa;
+
+    --white:#FAFAFA;
+
+    --gray-100:#E4E4E7;
+    --gray-200:#D4D4D8;
+    --gray-300:#A1A1AA;
+    --gray-400:#71717A;
+
+    --border:rgba(255,255,255,.08);
+
+    /* Typography */
+
+    --display:'Space Grotesk',sans-serif;
+    --body:'Inter',sans-serif;
+
+    /* Radius */
+
+    --radius-sm:8px;
+    --radius-md:16px;
+    --radius-lg:24px;
+
+    /* Container */
+
+    --container:1200px;
+
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:
+        radial-gradient(circle at top left, rgba(37,99,235,.06), transparent 20%),
+        radial-gradient(circle at 85% 12%, rgba(16,185,129,.05), transparent 18%),
+        url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+
+    background-color:var(--background);
+
+    background-repeat:repeat;
+
+    color:var(--white);
+
+    font-family:var(--body);
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+button{
+
+    font:inherit;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+html{
+
+    scroll-padding-top:110px;
+
+}
+
+main{
+
+    padding-top:98px;
+
+}
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+/* ===========================
+   NAVIGATION
+=========================== */
+
+.nav, .navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    backdrop-filter:blur(24px);
+
+    background:rgba(5,7,14,.88);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 30px 60px rgba(0,0,0,.25);
+
+    padding:0 24px;
+
+}
+
+.nav-inner, .nav-container{
+
+    max-width:var(--container);
+
+    height:80px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:24px;
+
+}
+
+.nav-welcome{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+    color:#fff;
+
+    font-size:.95rem;
+
+    padding:14px 22px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:0 24px 50px rgba(0,0,0,.20);
+
+    margin-right:32px;
+
+}
+
+.nav-greeting{
+
+    color:var(--gray-300);
+
+    font-size:.78rem;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.nav-subtitle{
+
+    color:#dbeafe;
+
+    font-size:.82rem;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    transition:color .25s ease, letter-spacing .25s ease, transform .25s ease;
+
+}
+
+.nav-welcome:hover .nav-subtitle{
+
+    color:#93c5fd;
+
+    letter-spacing:.12em;
+
+    transform:translateX(2px);
+
+}
+
+.nav-welcome strong{
+
+    font-family:var(--display);
+
+    font-size:1.05rem;
+
+    letter-spacing:.08em;
+
+}
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.logo-mark{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#2563EB,#10B981);
+
+    display:grid;
+
+    place-items:center;
+
+    font-weight:700;
+
+    color:white;
+
+    font-family:var(--display);
+
+}
+
+.logo-text h3{
+
+    font-size:16px;
+
+    font-family:var(--display);
+
+}
+
+.logo-text span{
+
+    color:var(--gray-300);
+
+    font-size:13px;
+
+}
+.nav-links{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+/* Center nav links while keeping logo left and CTA right */
+.nav-inner .nav-links{
+    flex:1 1 auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+}
+
+.nav-links a{
+
+    color:var(--gray-300);
+
+    font-size:.92rem;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+    transition:.25s ease;
+
+}
+
+.nav-links a:not(:last-child){
+
+    margin-right:4px;
+
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+
+    color:#fff;
+
+}
+
+.nav-cta{
+    margin-left:auto;
+    padding:12px 18px;
+    border-radius:16px;
+    background:linear-gradient(90deg,#2563EB,#60A5FA);
+    color:#fff;
+    font-weight:700;
+    letter-spacing:.02em;
+    border:1px solid rgba(96,165,250,.35);
+    box-shadow:0 18px 35px rgba(37,99,235,.16);
+    transition:.25s ease;
+}
+
+.nav-cta:hover{
+    transform:translateY(-1px);
+    background:linear-gradient(90deg,#3B82F6,#93C5FD);
+}
+
+.resume-btn{
+
+    padding:12px 24px;
+
+    border-radius:10px;
+
+    background:white;
+
+    color:black;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.nav-cta{
+
+    transition:.3s;
+
+}
+
+.resume-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+.nav-burger, .menu-btn{
+
+    display:none;
+
+}
+
+/* Burger icon bars and nav icon color (blue theme) */
+.nav-burger{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:48px;
+    height:48px;
+    background:transparent;
+    border-radius:10px;
+    transition:background .2s ease;
+}
+.nav-burger span{
+    display:block;
+    width:22px;
+    height:3px;
+    background:var(--primary);
+    border-radius:3px;
+    margin:3px 0;
+    transition:transform .25s ease, opacity .25s ease, background .25s ease;
+}
+.nav-burger:hover{ background:rgba(37,99,235,.06); }
+
+/* If icons are used inside nav links, make them blue to match theme */
+.nav-links a i,
+.nav-links a .fa,
+.nav-links a .fas{
+    color:var(--primary);
+    margin-right:8px;
+}
+/* ==========================
+   NAVIGATION STATES
+========================== */
+
+body.menu-open{
+
+    overflow:hidden;
+
+}
+
+.nav.scrolled{
+
+    background:rgba(9,9,11,.92);
+
+    backdrop-filter:blur(22px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 10px 40px rgba(0,0,0,.25);
+
+}
+
+.nav-link.active{
+
+    color:#2563eb;
+
+}
+
+.nav-burger.active span:nth-child(1){
+
+    transform:translateY(8px) rotate(45deg);
+
+}
+
+.nav-burger.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.nav-burger.active span:nth-child(3){
+
+    transform:translateY(-8px) rotate(-45deg);
+
+}
+
+.mobile-nav{
+
+    transform:translateY(-20px);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.35s ease;
+
+}
+
+.mobile-nav.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    pointer-events:auto;
+
+}
+
+.whatsapp-float{
+
+    position:fixed;
+
+    right:28px;
+
+    bottom:28px;
+
+    z-index:1200;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 18px;
+
+    border-radius:999px;
+
+    background:linear-gradient(135deg,#25D366,#128C7E);
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    box-shadow:0 24px 60px rgba(0,0,0,.32);
+
+    transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+
+}
+
+.whatsapp-float:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 28px 70px rgba(0,0,0,.38);
+
+    background:linear-gradient(135deg,#1ebc5f,#0f8f63);
+
+}
+
+.whatsapp-float i{
+    font-size:1.15rem;
+}
+
+/* Section text color rules to ensure readability on dark backgrounds */
+/* Headings */
+.section-header h2,
+h1, h2, h3,
+.project-body h3,
+.experience-content h3{
+    color:var(--white);
+}
+
+/* Paragraphs, descriptions and small text */
+.section-description,
+.about-text p,
+.project-body p,
+.experience-content p,
+.contact p,
+.credibility-card p,
+.section-tag{
+    color:var(--gray-200);
+}
+
+/* Project tech / tags */
+.project-tech span,
+.experience-tags span{
+    color:var(--gray-200);
+}
