@@ -3,40 +3,64 @@ const formMessage = document.querySelector('.form-message');
 
 if (contactForm && formMessage) {
     const submitBtn = contactForm.querySelector('button[type="submit"], button');
+    const endpoint = contactForm.getAttribute('action') || '';
 
-    contactForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-
-        // Show concise professional confirmation and keep it visible
-        formMessage.textContent = 'Thanks — I will respond within 22 hours.';
-        formMessage.classList.add('visible');
-        // move focus to the message for screen readers
+    const showFeedback = (message, isError = false) => {
+        formMessage.textContent = message;
+        formMessage.classList.toggle('visible', true);
+        formMessage.classList.toggle('error', isError);
+        formMessage.classList.toggle('success', !isError);
         try { formMessage.focus(); } catch (e) {}
+    };
 
-        // Disable submit to prevent duplicates
-        if (submitBtn) {
-            submitBtn.disabled = true;
-            submitBtn.classList.add('disabled');
-        }
-
-        // Clear all form controls so user input does not remain
+    const resetFormFields = () => {
         try {
             contactForm.reset();
-            // additionally clear any uncontrolled inputs
             contactForm.querySelectorAll('input, textarea').forEach(el => el.value = '');
         } catch (e) {
             // ignore
         }
+    };
 
-        // Auto-hide message after 20 seconds and re-enable submit
-        setTimeout(() => {
-            formMessage.classList.remove('visible');
-            formMessage.textContent = '';
-            if (submitBtn) {
-                submitBtn.disabled = false;
-                submitBtn.classList.remove('disabled');
+    const setSubmittingState = (isSubmitting) => {
+        if (submitBtn) {
+            submitBtn.disabled = isSubmitting;
+            submitBtn.classList.toggle('disabled', isSubmitting);
+            submitBtn.textContent = isSubmitting ? 'Sending...' : 'Send Message';
+        }
+    };
+
+    contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+            return;
+        }
+
+        setSubmittingState(true);
+        showFeedback('Sending your message...');
+
+        try {
+            const response = await fetch(endpoint, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json'
+                },
+                body: new FormData(contactForm)
+            });
+
+            if (!response.ok) {
+                throw new Error('Submission failed');
             }
-        }, 20000);
+
+            resetFormFields();
+            showFeedback('Thanks — I will respond within 22 hours.');
+        } catch (error) {
+            showFeedback('Sorry, your message could not be sent. Please email me directly at alexnjuguna602@gmail.com.', true);
+        } finally {
+            setSubmittingState(false);
+        }
     });
 }
 
